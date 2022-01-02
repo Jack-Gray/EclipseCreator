@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox xmlns:fx="http://javafx.com/fxml/1" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17"
+      fx:controller="com.example.eclipsecreator.MainController">
+    <padding>
+        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+    </padding>
+    <GridPane hgap="24.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="65.0"/>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <VBox>
+            <GridPane hgap="8.0" vgap="8.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints vgrow="SOMETIMES"/>
+                    <RowConstraints vgrow="SOMETIMES"/>
+                    <RowConstraints vgrow="SOMETIMES"/>
+                    <RowConstraints vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <VBox>
+                    <TextField/>
+                    <Label text="Name"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1">
+                    <TextField/>
+                    <Label text="Gender Identity"/>
+                </VBox>
+                <VBox GridPane.columnIndex="2">
+                    <TextField/>
+                    <Label text="Age"/>
+                </VBox>
+                <VBox GridPane.rowIndex="1">
+                    <TextField/>
+                    <Label text="Background"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <TextField/>
+                    <Label text="Career"/>
+                </VBox>
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <TextField/>
+                    <Label text="Interest"/>
+                </VBox>
+                <VBox GridPane.rowIndex="2">
+                    <TextField/>
+                    <Label text="Faction"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <TextField/>
+                    <Label text="Race"/>
+                </VBox>
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <TextField/>
+                    <Label text="CP"/>
+                </VBox>
+                <VBox GridPane.rowIndex="3">
+                    <TextField/>
+                    <Label text="Motivation 1"/>
+                </VBox>
+                <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <TextField/>
+                    <Label text="Motivation 2"/>
+                </VBox>
+                <VBox GridPane.columnIndex="2" GridPane.rowIndex="3">
+                    <TextField/>
+                    <Label text="Motivation 3"/>
+                </VBox>
+            </GridPane>
+            <GridPane hgap="8.0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="50.0"/>
+                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <padding>
+                    <Insets top="32.0"/>
+                </padding>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ego"/>
+                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Skills"
+                        GridPane.columnIndex="1"/>
+            </GridPane>
+            <StackPane VBox.vgrow="ALWAYS">
+                <VBox.margin>
+                    <Insets bottom="8.0" left="8.0" right="8.0" top="16.0"/>
+                </VBox.margin>
+                <VBox prefHeight="200.0" prefWidth="100.0" spacing="8.0" visible="false">
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308"
+                               text="KNOW SKILLS"/>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="C1"/>
+                                <TableColumn prefWidth="75.0" text="C2"/>
+                            </columns>
+                        </TableView>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label"/>
+                    </VBox>
+                    <VBox prefHeight="200.0" prefWidth="100.0">
+                        <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308"
+                               text="ACTIVE SKILLS"/>
+                        <TableView prefHeight="200.0" prefWidth="200.0">
+                            <columns>
+                                <TableColumn prefWidth="75.0" text="C1"/>
+                                <TableColumn prefWidth="75.0" text="C2"/>
+                            </columns>
+                        </TableView>
+                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label"/>
+                    </VBox>
+                </VBox>
+                <VBox spacing="8.0">
+                    <VBox>
+                        <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="APTITUDES"/>
+                        <VBox spacing="8.0">
+                            <padding>
+                                <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                            </padding>
+                            <GridPane hgap="8.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0"
+                                                       prefWidth="100.0"/>
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" vgrow="SOMETIMES"/>
+                                </rowConstraints>
+                                <VBox>
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="COGNITION"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="1">
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="INTUITION"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="2">
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="REFLEXES"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="3">
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="SAVVY"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="4">
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="SOMATICS"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="5">
+                                    <Spinner/>
+                                    <Label alignment="CENTER" text="WILLPOWER"/>
+                                </VBox>
+                            </GridPane>
+                            <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label"/>
+                        </VBox>
+                    </VBox>
+                    <HBox spacing="8.0">
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308"
+                                   text="MENTAL STATS"/>
+                            <GridPane hgap="8.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity"/>
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                </rowConstraints>
+                                <VBox.margin>
+                                    <Insets/>
+                                </VBox.margin>
+                                <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                </padding>
+                                <VBox>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="Label"/>
+                                    <Separator/>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="TRAUMA THRESHOLD"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="1">
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="Label"/>
+                                    <Separator/>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="LUCIDITY"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="2">
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="Label"/>
+                                    <Separator/>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="INSANITY RATING"/>
+                                </VBox>
+                            </GridPane>
+                        </VBox>
+                        <VBox HBox.hgrow="ALWAYS">
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308"
+                                   text="DERIVED STATS"/>
+                            <GridPane hgap="8.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="-Infinity"/>
+                                </columnConstraints>
+                                <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0"
+                                                    vgrow="SOMETIMES"/>
+                                </rowConstraints>
+                                <padding>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                </padding>
+                                <VBox>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="Label"/>
+                                    <Separator/>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="INITIATIVE"/>
+                                </VBox>
+                                <VBox GridPane.columnIndex="1">
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="Label"/>
+                                    <Separator/>
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
+                                           text="BASIC PERCEPTION"/>
+                                </VBox>
+                            </GridPane>
+                        </VBox>
+                    </HBox>
+                </VBox>
+            </StackPane>
+        </VBox>
+        <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+            <Tab text="Race">
+                <VBox spacing="24.0">
+                    <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                    </padding>
+                    <GridPane hgap="8.0" vgap="8.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Anisaeva"
+                                GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Bilago"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Callihara"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Colonist"
+                                GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kellek"
+                                GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Djek"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Exith"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Naora"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Okex"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sekkess"
+                                GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Senn"
+                                GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                    </GridPane>
+                    <TextArea/>
+                </VBox>
+            </Tab>
+            <Tab text="Background">
+                <VBox spacing="24.0">
+                    <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                    </padding>
+                    <VBox spacing="8.0">
+                        <GridPane hgap="8.0" vgap="8.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Construct" GridPane.columnSpan="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Freelancer" GridPane.columnIndex="2"
+                                    GridPane.columnSpan="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Hyperelite" GridPane.columnIndex="4"
+                                    GridPane.columnSpan="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Indenture" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Loner"
+                                    GridPane.columnIndex="2" GridPane.columnSpan="2"
+                                    GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Settler"
+                                    GridPane.columnIndex="4" GridPane.columnSpan="2"
+                                    GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Sheltered" GridPane.columnIndex="1"
+                                    GridPane.columnSpan="2"
+                                    GridPane.rowIndex="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Underclass" GridPane.columnIndex="3"
+                                    GridPane.columnSpan="2"
+                                    GridPane.rowIndex="2"/>
+                        </GridPane>
+                        <HBox spacing="8.0">
+                            <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                            <Label text="Psi Backgrounds"/>
+                            <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                        <GridPane hgap="8.0" vgap="8.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Freak"
+                                    GridPane.columnIndex="1" GridPane.columnSpan="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Psionicist" GridPane.columnIndex="3"
+                                    GridPane.columnSpan="2"/>
+                        </GridPane>
+                    </VBox>
+                    <TextArea/>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="75.0" text="C1"/>
+                            <TableColumn prefWidth="75.0" text="C2"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <Tab text="Career">
+                <VBox spacing="24.0">
+                    <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                    </padding>
+                    <GridPane hgap="8.0" vgap="8.0">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                            <RowConstraints vgrow="SOMETIMES"/>
+                        </rowConstraints>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Academic"
+                                GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Covert Ops"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Enforcer"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Explorer"
+                                GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Face"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Genehacker"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hacker"
+                                GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Investigator"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Medic"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Mindhacker"
+                                GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Scavenger"
+                                GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Scientist"
+                                GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Soldier"
+                                GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
+                        <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                text="Technologist"
+                                GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
+                    </GridPane>
+                    <TextArea/>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="75.0" text="C1"/>
+                            <TableColumn prefWidth="75.0" text="C2"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+            <Tab text="Interest">
+                <VBox spacing="24.0">
+                    <padding>
+                        <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                    </padding>
+                    <VBox spacing="8.0">
+                        <GridPane hgap="8.0" vgap="8.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Artist/Icon"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Fighter"
+                                    GridPane.columnIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="First Aider" GridPane.columnIndex="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Forensics" GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Networker" GridPane.rowIndex="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Remote Ops" GridPane.rowIndex="3"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Student"
+                                    GridPane.rowIndex="4"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Handler"
+                                    GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Pantologist" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Reprobate" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="3"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Survivalist" GridPane.columnIndex="1"
+                                    GridPane.rowIndex="4"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Leader"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Pilot"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Slacker"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Voyager"
+                                    GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                        </GridPane>
+                        <HBox spacing="8.0">
+                            <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                            <Label alignment="CENTER" text="Psi Interests" HBox.hgrow="ALWAYS"/>
+                            <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                        </HBox>
+                        <GridPane hgap="8.0" vgap="8.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0"/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints vgrow="SOMETIMES"/>
+                            </rowConstraints>
+                            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false"
+                                    text="Psionics"
+                                    GridPane.columnIndex="1"/>
+                        </GridPane>
+                    </VBox>
+                    <TextArea/>
+                    <TableView prefHeight="200.0" prefWidth="200.0">
+                        <columns>
+                            <TableColumn prefWidth="75.0" text="C1"/>
+                            <TableColumn prefWidth="75.0" text="C2"/>
+                        </columns>
+                    </TableView>
+                </VBox>
+            </Tab>
+        </TabPane>
+    </GridPane>
+</VBox>

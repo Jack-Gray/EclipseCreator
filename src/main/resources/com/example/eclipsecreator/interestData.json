@@ -1,380 +1,428 @@
 {
-  "artist/icon": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Dance",
-        "Music",
-        "Sculpture"
-      ],
-      "value": 40
-    }
-  ],
-  "fighter": [
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Melee",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Security Ops",
-      "value": 40
-    }
-  ],
-  "first aider": [
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Paramedic",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Emergency Services",
-      "value": 40
-    }
-  ],
-  "forensics": [
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Forensics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Physiology",
-      "value": 40
-    }
-  ],
-  "handler": [
-    {
-      "type": "SINGLE",
-      "option": "Exotic Skill: Animal Handling",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Veterinary",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Domesticated Animals",
-      "value": 40
-    }
-  ],
-  "leader": [
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Administration",
-      "value": 40
-    }
-  ],
-  "networker": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Social Networks",
-      "value": 40
-    }
-  ],
-  "pantologist": [
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 25
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 25
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 25
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 25
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "pilot": [
-    {
-      "type": "INPUT",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Flight Crew Ops",
-      "value": 40
-    }
-  ],
-  "psionics": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Psi",
-      "value": 40
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "remote ops": [
-    {
-      "type": "SINGLE",
-      "option": "Hardware: Robotics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Know: Bot Models",
-      "value": 40
-    }
-  ],
-  "reprobate": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infiltrate",
-      "value": 40
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "slacker": [
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 30
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "student": [
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 40
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "survivalist": [
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Paramedic",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Survival",
-      "value": 30
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    }
-  ],
-  "voyager": [
-    {
-      "type": "SINGLE",
-      "option": "Free Fall",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Hardware: Choose One",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Astronomy",
-        "Flight Crew Ops",
-        "Gas Mining"
-      ],
-      "value": 40
-    }
-  ]
+  "artist/icon": {
+    "description": "You are a musician, performer, celebrity, or other type of creative or public figure.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Dance",
+          "Music",
+          "Sculpture"
+        ],
+        "value": 40
+      }
+    ]
+  },
+  "fighter": {
+    "description": "You\u2019ve picked up some self-defence and offensive skills along the way.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Melee",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Security Ops",
+        "value": 40
+      }
+    ]
+  },
+  "first aider": {
+    "description": "You have picked up some first aid training.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Paramedic",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Emergency Services",
+        "value": 40
+      }
+    ]
+  },
+  "forensics": {
+    "description": "You\u2019ve trained to analyze crime scenes and perform autopsies.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Forensics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Physiology",
+        "value": 40
+      }
+    ]
+  },
+  "handler": {
+    "description": "You\u2019ve learned to raise, train, and care for animals.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Exotic Skill: Animal Handling",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Veterinary",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Domesticated Animals",
+        "value": 40
+      }
+    ]
+  },
+  "leader": {
+    "description": "You are accustomed to leadership roles as an executive, officer, politician, or organizer.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Administration",
+        "value": 40
+      }
+    ]
+  },
+  "networker": {
+    "description": "You know how to use social networks to engage and connect with people.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Social Networks",
+        "value": 40
+      }
+    ]
+  },
+  "pantologist": {
+    "description": "You\u2019ve seen and done a little bit of everything.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 25
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 25
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 25
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 25
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "pilot": {
+    "description": "You prefer to do the driving yourself, no matter how skilled the AI is.",
+    "skills": [
+      {
+        "type": "INPUT",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Flight Crew Ops",
+        "value": 40
+      }
+    ]
+  },
+  "psionics": {
+    "description": "Through some unknown mechanism, you have gained a number of unique mental talents and disadvantages.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Psi",
+        "value": 40
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "remote ops": {
+    "description": "You\u2019re a drone operator, with a talent for manipulating machines.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Hardware: Robotics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Know: Bot Models",
+        "value": 40
+      }
+    ]
+  },
+  "reprobate": {
+    "description": "You are as shifty as you need to be.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infiltrate",
+        "value": 40
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "slacker": {
+    "description": "You prefer to enjoy the good things in life.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 30
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "student": {
+    "description": "You are in the process of learning.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 40
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "survivalist": {
+    "description": "The Driver Network Collapse reinforced the notion that you need to be prepared.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Paramedic",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Survival",
+        "value": 30
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "voyager": {
+    "description": "You\u2019ve spent your fair share of time in ships and smaller habitats.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Free Fall",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Hardware: Choose One",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Astronomy",
+          "Flight Crew Ops",
+          "Gas Mining"
+        ],
+        "value": 40
+      }
+    ]
+  }
 }

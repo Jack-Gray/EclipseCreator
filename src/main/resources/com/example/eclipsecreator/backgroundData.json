@@ -1,535 +1,565 @@
 {
-  "construct": [
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Accounting",
-        "Administration",
-        "System Administration"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Computer Science",
-        "Cryptography",
-        "Psychometrics"
-      ],
-      "value": 30
-    }
-  ],
-  "freak": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infiltrate",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Psi",
-      "value": 50
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Identity Fabrication",
-        "Sapient Smuggling"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Privacy",
-        "Undergrids",
-        "Mind Hacks"
-      ],
-      "value": 30
-    }
-  ],
-  "freelancer": [
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Accounting",
-        "Data Processing",
-        "Freelancing"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Craft Beers",
-        "Market Culture",
-        "Sports"
-      ],
-      "value": 30
-    }
-  ],
-  "hyperelite": [
-    {
-      "type": "SINGLE",
-      "option": "Athletics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Fine Art",
-        "Hypercorp Politics",
-        "Stock Market"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Economics",
-        "Law",
-        "Political Science"
-      ],
-      "value": 30
-    }
-  ],
-  "indenture": [
-    {
-      "type": "DOUBLE",
-      "option": [
-        "Fray",
-        "Melee"
-      ],
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Fray or Melee",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Free Fall",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Groundcraft",
-        "Industrial",
-        "Robotics"
-      ],
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Asteroid Mining",
-        "Habitat Ops",
-        "Terraforming"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Gambling",
-        "ExShare Dealers"
-      ],
-      "value": 30
-    }
-  ],
-  "loner": [
-    {
-      "type": "SINGLE",
-      "option": "Free Fall",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Aerospace",
-        "Electronics",
-        "Robotics"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Paramedic",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Survival",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Flight Crew Ops",
-        "Gas Mining",
-        "Habitat Ops"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Bioconservativism",
-        "Conspiracies",
-        "Religion",
-        "Fringe Politics"
-      ],
-      "value": 30
-    }
-  ],
-  "psionicist": [
-    {
-      "type": "SINGLE",
-      "option": "Athletics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Psi",
-      "value": 50
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Protectorate Protocols",
-        "Pop Culture",
-        "Investigation"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Linguistics",
-        "Psychology",
-        "Sociology"
-      ],
-      "value": 30
-    }
-  ],
-  "settler": [
-    {
-      "type": "DOUBLE",
-      "option": [
-        "Athletics",
-        "Free Fall"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Athletics or Free Fall",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Aerospace",
-        "Electronics",
-        "Industrial"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Survival",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Administration",
-        "Agriculture Ops",
-        "Habitat Ops"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Botany",
-        "Chemistry",
-        "Engineering",
-        "Physics"
-      ],
-      "value": 30
-    }
-  ],
-  "sheltered": [
-    {
-      "type": "SINGLE",
-      "option": "Athletics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Pilot: Ground",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Celebrity Gossip",
-        "Pop Culture",
-        "Sports"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Economics",
-        "Education",
-        "Psychology"
-      ],
-      "value": 30
-    }
-  ],
-  "underclass": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 20
-    },
-    {
-      "type": "DOUBLE",
-      "option": [
-        "Guns",
-        "Melee"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Guns or Melee",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Drugs",
-        "Criminal Orgs"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Con Artistry",
-        "Police Ops",
-        "Smuggling"
-      ],
-      "value": 30
-    }
-  ]
+  "construct": {
+    "description": "You are an AGI, a digital consciousness born of software code.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Accounting",
+          "Administration",
+          "System Administration"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Computer Science",
+          "Cryptography",
+          "Psychometrics"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "freak": {
+    "description": "Your psionic abilities have always been a cause of distrust from others. You lived on your own, hiding your true nature for as long as possible before moving on.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infiltrate",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Psi",
+        "value": 50
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Identity Fabrication",
+          "Sapient Smuggling"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Privacy",
+          "Undergrids",
+          "Mind Hacks"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "freelancer": {
+    "description": "You took part in the machine of hypercapitalism, hopping from place to place and doing whatever jobs would pay your bills.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Accounting",
+          "Data Processing",
+          "Freelancing"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Craft Beers",
+          "Market Culture",
+          "Sports"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "hyperelite": {
+    "description": "You come from a private city where you lived among the top percent, surrounded by wealth and abundance.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Athletics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Fine Art",
+          "Hypercorp Politics",
+          "Stock Market"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Economics",
+          "Law",
+          "Political Science"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "indenture": {
+    "description": "After suffering some misfortune, you sold yourself to a hypercorp for a long-term work contract, resulting in several years of your life being spent working off increasing debt.",
+    "skills": [
+      {
+        "type": "DOUBLE",
+        "option": [
+          "Fray",
+          "Melee"
+        ],
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Fray or Melee",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Free Fall",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Groundcraft",
+          "Industrial",
+          "Robotics"
+        ],
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Asteroid Mining",
+          "Habitat Ops",
+          "Terraforming"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Gambling",
+          "ExShare Dealers"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "loner": {
+    "description": "You come from a life of isolation in a remote habitat or ship on the fringes of civilized space.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Free Fall",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Aerospace",
+          "Electronics",
+          "Robotics"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Paramedic",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Survival",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Flight Crew Ops",
+          "Gas Mining",
+          "Habitat Ops"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Bioconservativism",
+          "Conspiracies",
+          "Religion",
+          "Fringe Politics"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "psionicist": {
+    "description": "When your psionic abilities came, you were trained to control them by the Protectorate. Your life hasn't been easy, but it could have been much worse.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Athletics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Psi",
+        "value": 50
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Protectorate Protocols",
+          "Pop Culture",
+          "Investigation"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Linguistics",
+          "Psychology",
+          "Sociology"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "settler": {
+    "description": "You come from a small settlement or outpost, where you and your community frequently had to fend for yourselves.",
+    "skills": [
+      {
+        "type": "DOUBLE",
+        "option": [
+          "Athletics",
+          "Free Fall"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Athletics or Free Fall",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Aerospace",
+          "Electronics",
+          "Industrial"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Survival",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Administration",
+          "Agriculture Ops",
+          "Habitat Ops"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Botany",
+          "Chemistry",
+          "Engineering",
+          "Physics"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "sheltered": {
+    "description": "You came from an inner system, insulated from the threats of the wider galaxy by a network of logistics, media, and military force.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Athletics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Pilot: Ground",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Celebrity Gossip",
+          "Pop Culture",
+          "Sports"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Economics",
+          "Education",
+          "Psychology"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "underclass": {
+    "description": "You slipped through the cracks of the hypercapitalist structure, living in slums and doing whatever was necessary to survive.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 20
+      },
+      {
+        "type": "DOUBLE",
+        "option": [
+          "Guns",
+          "Melee"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Guns or Melee",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Drugs",
+          "Criminal Orgs"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Con Artistry",
+          "Police Ops",
+          "Smuggling"
+        ],
+        "value": 30
+      }
+    ]
+  }
 }

@@ -1,550 +1,592 @@
 {
-  "academic": [
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 60
-    },
-    {
-      "type": "INPUT",
-      "value": 60
-    },
-    {
-      "type": "INPUT",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Administration",
-        "Instruction",
-        "Lab Ops"
-      ],
-      "value": 30
-    }
-  ],
-  "covert ops": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infiltrate",
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Security Ops",
-        "Smuggling",
-        "Spycraft"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Current Events",
-        "Undergrids"
-      ],
-      "value": 30
-    }
-  ],
-  "enforcer": [
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Melee",
-      "value": 50
-    },
-    {
-      "type": "SINGLE",
-      "option": "Provoke",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Bodyguarding",
-        "Racketeering",
-        "Security Ops"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Criminal Org Politics",
-        "Gambling",
-        "Night Clubs"
-      ],
-      "value": 30
-    }
-  ],
-  "explorer": [
-    {
-      "type": "SINGLE",
-      "option": "Athletics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Paramedic",
-      "value": 20
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 20
-    },
-    {
-      "type": "SINGLE",
-      "option": "Survival",
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "First-Contact Ops",
-        "Exploration Ops",
-        "Surveying"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Astrobiology",
-        "Geology",
-        "Xenoarcheology"
-      ],
-      "value": 30
-    }
-  ],
-  "face": [
-    {
-      "type": "SINGLE",
-      "option": "Deceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Persuade",
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Fencing",
-        "Police Ops",
-        "Smuggling"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Drugs",
-        "Underground ExShare"
-      ],
-      "value": 30
-    }
-  ],
-  "genehacker": [
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Biotech",
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Pharmacology",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Biology",
-        "Genetics",
-        "Physiology"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Lab Ops",
-        "Medical Services",
-        "Morph Design"
-      ],
-      "value": 30
-    }
-  ],
-  "hacker": [
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Interface",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Computer Science",
-        "Cryptography",
-        "Mathematics"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Data Processing",
-        "Network Engineering",
-        "System Administration"
-      ],
-      "value": 30
-    }
-  ],
-  "investigator": [
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Perceive",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Ego Hunting",
-        "Investigation",
-        "Journalism"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Market",
-        "Current Events",
-        "Criminal Orgs"
-      ],
-      "value": 30
-    }
-  ],
-  "medic": [
-    {
-      "type": "SINGLE",
-      "option": "Kinesics",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Paramedic",
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Biotech",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Biology",
-        "Genetics",
-        "Psychology"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Cr\u00e8che Ops",
-        "Emergency Services",
-        "Surgical Ops"
-      ],
-      "value": 30
-    }
-  ],
-  "mindhacker": [
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Pharmacology",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Medicine: Psychosurgery",
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Cognitive Science",
-        "Memetics",
-        "Psychology"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Cr\u00e8che Ops",
-        "Medical Services",
-        "Social Services"
-      ],
-      "value": 30
-    }
-  ],
-  "scavenger": [
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Electronics",
-        "Industrial",
-        "Robotics"
-      ],
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Hardware: Demolitions",
-      "value": 40
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Pilot",
-      "option": [
-        "Air",
-        "Ground",
-        "Nautical",
-        "Space"
-      ],
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Flight Crew Ops",
-        "Scavenging",
-        "Smuggling"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Black Markets",
-        "Spacecraft",
-        "Precursor Ruins"
-      ],
-      "value": 30
-    }
-  ],
-  "scientist": [
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Electronics",
-        "Robotics"
-      ],
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 30
-    },
-    {
-      "type": "SINGLE",
-      "option": "Research",
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Astrobiology",
-        "Memetics",
-        "Physics"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Field Science",
-        "Investigation",
-        "Lab Ops"
-      ],
-      "value": 30
-    }
-  ],
-  "soldier": [
-    {
-      "type": "SINGLE",
-      "option": "Fray",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Guns",
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Melee",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Bodyguarding",
-        "Military Ops",
-        "Security Ops"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Conflict Zones",
-        "Gambling",
-        "Mercenary Groups"
-      ],
-      "value": 30
-    }
-  ],
-  "technologist": [
-    {
-      "type": "MULTI",
-      "prefix": "Hardware",
-      "option": [
-        "Electronics",
-        "Industrial",
-        "Robotics"
-      ],
-      "value": 60
-    },
-    {
-      "type": "SINGLE",
-      "option": "Infosec",
-      "value": 40
-    },
-    {
-      "type": "SINGLE",
-      "option": "Program",
-      "value": 30
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Construction",
-        "Habitat Ops",
-        "Mining",
-        "Nanofacturing"
-      ],
-      "value": 60
-    },
-    {
-      "type": "MULTI",
-      "prefix": "Know",
-      "option": [
-        "Computer Science",
-        "Engineering",
-        "Nanotechnology"
-      ],
-      "value": 30
-    }
-  ]
+  "academic": {
+    "description": "You devote your efforts to the pursuit of knowledge.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 60
+      },
+      {
+        "type": "INPUT",
+        "value": 60
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Administration",
+          "Instruction",
+          "Lab Ops"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "covert ops": {
+    "description": "You are a spy, infiltrator, thief, or undercover agent, skilled at accessing places you don\u2019t belong.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infiltrate",
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Security Ops",
+          "Smuggling",
+          "Spycraft"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Current Events",
+          "Undergrids"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "enforcer": {
+    "description": "You're a thug, wielding force for money. As long as it makes the credits roll in, you'll crack as many heads as you need.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Melee",
+        "value": 50
+      },
+      {
+        "type": "SINGLE",
+        "option": "Provoke",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Bodyguarding",
+          "Racketeering",
+          "Security Ops"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Criminal Org Politics",
+          "Gambling",
+          "Night Clubs"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "explorer": {
+    "description": "You\u2019ve walked on alien worlds and seen things with your own eyes that others wouldn't believe.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Athletics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Paramedic",
+        "value": 20
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 20
+      },
+      {
+        "type": "SINGLE",
+        "option": "Survival",
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "First-Contact Ops",
+          "Exploration Ops",
+          "Surveying"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Astrobiology",
+          "Geology",
+          "Xenoarcheology"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "face": {
+    "description": "You excel at convincing others, even when it\u2019s not in their best interest.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Deceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Persuade",
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Fencing",
+          "Police Ops",
+          "Smuggling"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Drugs",
+          "Underground ExShare"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "genehacker": {
+    "description": "DNA is your artistic medium, and proteins your weapon of choice.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Biotech",
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Pharmacology",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Biology",
+          "Genetics",
+          "Physiology"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Lab Ops",
+          "Medical Services",
+          "Morph Design"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "hacker": {
+    "description": "Digital systems heed your beck and call, whether you seek to exploit or protect them.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Interface",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Computer Science",
+          "Cryptography",
+          "Mathematics"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Data Processing",
+          "Network Engineering",
+          "System Administration"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "investigator": {
+    "description": "Whether you\u2019re a journalist, private investigator, detective, or insurance claims investigator, few details escape your scrutiny.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Perceive",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Ego Hunting",
+          "Investigation",
+          "Journalism"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Market",
+          "Current Events",
+          "Criminal Orgs"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "medic": {
+    "description": "You have a background in medicine and experience as a physician, surgeon, paramedic, cr\u00e8che operator, or other type of medical specialist.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Kinesics",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Paramedic",
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Biotech",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Biology",
+          "Genetics",
+          "Psychology"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Cr\u00e8che Ops",
+          "Emergency Services",
+          "Surgical Ops"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "mindhacker": {
+    "description": "You make use of advanced technology to meld and shape minds and memories. You might be a therapist, memeticist, or psychosurgeon pushing the bounds of cognition.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Pharmacology",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Medicine: Psychosurgery",
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Cognitive Science",
+          "Memetics",
+          "Psychology"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Cr\u00e8che Ops",
+          "Medical Services",
+          "Social Services"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "scavenger": {
+    "description": "You search through wrecks and ruins across the galaxy, seeking a profit hidden in the scrap. You could be a salvage runner, scrap dealer, or a reclamation contractor.",
+    "skills": [
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Electronics",
+          "Industrial",
+          "Robotics"
+        ],
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Hardware: Demolitions",
+        "value": 40
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Pilot",
+        "option": [
+          "Air",
+          "Ground",
+          "Nautical",
+          "Space"
+        ],
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Flight Crew Ops",
+          "Scavenging",
+          "Smuggling"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Black Markets",
+          "Spacecraft",
+          "Precursor Ruins"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "scientist": {
+    "description": "You seek to understand how the universe works - or at least certain elements of it.",
+    "skills": [
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Electronics",
+          "Robotics"
+        ],
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 30
+      },
+      {
+        "type": "SINGLE",
+        "option": "Research",
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Astrobiology",
+          "Memetics",
+          "Physics"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Field Science",
+          "Investigation",
+          "Lab Ops"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "soldier": {
+    "description": "You serve a government, hypercorp, or mercenary outfit. It isn't glamorous, but it's simple.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "Fray",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Guns",
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Melee",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Bodyguarding",
+          "Military Ops",
+          "Security Ops"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Conflict Zones",
+          "Gambling",
+          "Mercenary Groups"
+        ],
+        "value": 30
+      }
+    ]
+  },
+  "technologist": {
+    "description": "You make and fix things. You might be a roboticist, engineer, or a nanofabricator artisan.",
+    "skills": [
+      {
+        "type": "MULTI",
+        "prefix": "Hardware",
+        "option": [
+          "Electronics",
+          "Industrial",
+          "Robotics"
+        ],
+        "value": 60
+      },
+      {
+        "type": "SINGLE",
+        "option": "Infosec",
+        "value": 40
+      },
+      {
+        "type": "SINGLE",
+        "option": "Program",
+        "value": 30
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Construction",
+          "Habitat Ops",
+          "Mining",
+          "Nanofacturing"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "Know",
+        "option": [
+          "Computer Science",
+          "Engineering",
+          "Nanotechnology"
+        ],
+        "value": 30
+      }
+    ]
+  }
 }

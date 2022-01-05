@@ -1,0 +1,550 @@
+{
+  "academic": [
+    [
+      "SINGLE",
+      "Interface",
+      30
+    ],
+    [
+      "SINGLE",
+      "Research",
+      60
+    ],
+    [
+      "INPUT",
+      60
+    ],
+    [
+      "INPUT",
+      40
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Administration",
+        "Instruction",
+        "Lab Ops"
+      ],
+      30
+    ]
+  ],
+  "covert ops": [
+    [
+      "SINGLE",
+      "Deceive",
+      40
+    ],
+    [
+      "SINGLE",
+      "Infiltrate",
+      60
+    ],
+    [
+      "SINGLE",
+      "Infosec",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Security Ops",
+        "Smuggling",
+        "Spycraft"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Black Markets",
+        "Current Events",
+        "Undergrids"
+      ],
+      30
+    ]
+  ],
+  "enforcer": [
+    [
+      "SINGLE",
+      "Fray",
+      30
+    ],
+    [
+      "SINGLE",
+      "Guns",
+      20
+    ],
+    [
+      "SINGLE",
+      "Melee",
+      50
+    ],
+    [
+      "SINGLE",
+      "Provoke",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Bodyguarding",
+        "Racketeering",
+        "Security Ops"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Criminal Org Politics",
+        "Gambling",
+        "Night Clubs"
+      ],
+      30
+    ]
+  ],
+  "explorer": [
+    [
+      "SINGLE",
+      "Athletics",
+      30
+    ],
+    [
+      "SINGLE",
+      "Medicine: Paramedic",
+      20
+    ],
+    [
+      "MULTI",
+      "Pilot",
+      [
+        "Air",
+        "Ground",
+        "Nautical",
+        "Space"
+      ],
+      20
+    ],
+    [
+      "SINGLE",
+      "Survival",
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "First-Contact Ops",
+        "Exploration Ops",
+        "Surveying"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Astrobiology",
+        "Geology",
+        "Xenoarcheology"
+      ],
+      30
+    ]
+  ],
+  "face": [
+    [
+      "SINGLE",
+      "Deceive",
+      40
+    ],
+    [
+      "SINGLE",
+      "Kinesics",
+      30
+    ],
+    [
+      "SINGLE",
+      "Persuade",
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Fencing",
+        "Police Ops",
+        "Smuggling"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Black Markets",
+        "Drugs",
+        "Underground ExShare"
+      ],
+      30
+    ]
+  ],
+  "genehacker": [
+    [
+      "SINGLE",
+      "Medicine: Biotech",
+      60
+    ],
+    [
+      "SINGLE",
+      "Medicine: Pharmacology",
+      40
+    ],
+    [
+      "SINGLE",
+      "Program",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Biology",
+        "Genetics",
+        "Physiology"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Lab Ops",
+        "Medical Services",
+        "Morph Design"
+      ],
+      30
+    ]
+  ],
+  "hacker": [
+    [
+      "SINGLE",
+      "Infosec",
+      60
+    ],
+    [
+      "SINGLE",
+      "Interface",
+      40
+    ],
+    [
+      "SINGLE",
+      "Program",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Computer Science",
+        "Cryptography",
+        "Mathematics"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Data Processing",
+        "Network Engineering",
+        "System Administration"
+      ],
+      30
+    ]
+  ],
+  "investigator": [
+    [
+      "SINGLE",
+      "Kinesics",
+      30
+    ],
+    [
+      "SINGLE",
+      "Perceive",
+      40
+    ],
+    [
+      "SINGLE",
+      "Research",
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Ego Hunting",
+        "Investigation",
+        "Journalism"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Black Market",
+        "Current Events",
+        "Criminal Orgs"
+      ],
+      30
+    ]
+  ],
+  "medic": [
+    [
+      "SINGLE",
+      "Kinesics",
+      30
+    ],
+    [
+      "SINGLE",
+      "Medicine: Paramedic",
+      60
+    ],
+    [
+      "SINGLE",
+      "Medicine: Biotech",
+      40
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Biology",
+        "Genetics",
+        "Psychology"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Cr\u00e8che Ops",
+        "Emergency Services",
+        "Surgical Ops"
+      ],
+      30
+    ]
+  ],
+  "mindhacker": [
+    [
+      "SINGLE",
+      "Infosec",
+      30
+    ],
+    [
+      "SINGLE",
+      "Medicine: Pharmacology",
+      40
+    ],
+    [
+      "SINGLE",
+      "Medicine: Psychosurgery",
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Cognitive Science",
+        "Memetics",
+        "Psychology"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Cr\u00e8che Ops",
+        "Medical Services",
+        "Social Services"
+      ],
+      30
+    ]
+  ],
+  "scavenger": [
+    [
+      "MULTI",
+      "Hardware",
+      [
+        "Electronics",
+        "Industrial",
+        "Robotics"
+      ],
+      60
+    ],
+    [
+      "SINGLE",
+      "Hardware: Demolitions",
+      40
+    ],
+    [
+      "MULTI",
+      "Pilot",
+      [
+        "Air",
+        "Ground",
+        "Nautical",
+        "Space"
+      ],
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Flight Crew Ops",
+        "Scavenging",
+        "Smuggling"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Black Markets",
+        "Spacecraft",
+        "Precursor Ruins"
+      ],
+      30
+    ]
+  ],
+  "scientist": [
+    [
+      "MULTI",
+      "Hardware",
+      [
+        "Electronics",
+        "Robotics"
+      ],
+      40
+    ],
+    [
+      "SINGLE",
+      "Program",
+      30
+    ],
+    [
+      "SINGLE",
+      "Research",
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Astrobiology",
+        "Memetics",
+        "Physics"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Field Science",
+        "Investigation",
+        "Lab Ops"
+      ],
+      30
+    ]
+  ],
+  "soldier": [
+    [
+      "SINGLE",
+      "Fray",
+      40
+    ],
+    [
+      "SINGLE",
+      "Guns",
+      60
+    ],
+    [
+      "SINGLE",
+      "Melee",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Bodyguarding",
+        "Military Ops",
+        "Security Ops"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Conflict Zones",
+        "Gambling",
+        "Mercenary Groups"
+      ],
+      30
+    ]
+  ],
+  "technologist": [
+    [
+      "MULTI",
+      "Hardware",
+      [
+        "Electronics",
+        "Industrial",
+        "Robotics"
+      ],
+      60
+    ],
+    [
+      "SINGLE",
+      "Infosec",
+      40
+    ],
+    [
+      "SINGLE",
+      "Program",
+      30
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Construction",
+        "Habitat Ops",
+        "Mining",
+        "Nanofacturing"
+      ],
+      60
+    ],
+    [
+      "MULTI",
+      "Know",
+      [
+        "Computer Science",
+        "Engineering",
+        "Nanotechnology"
+      ],
+      30
+    ]
+  ]
+}

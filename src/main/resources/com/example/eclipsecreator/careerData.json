@@ -1,550 +1,550 @@
 {
   "academic": [
-    [
-      "SINGLE",
-      "Interface",
-      30
-    ],
-    [
-      "SINGLE",
-      "Research",
-      60
-    ],
-    [
-      "INPUT",
-      60
-    ],
-    [
-      "INPUT",
-      40
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Research",
+      "value": 60
+    },
+    {
+      "type": "INPUT",
+      "value": 60
+    },
+    {
+      "type": "INPUT",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Administration",
         "Instruction",
         "Lab Ops"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "covert ops": [
-    [
-      "SINGLE",
-      "Deceive",
-      40
-    ],
-    [
-      "SINGLE",
-      "Infiltrate",
-      60
-    ],
-    [
-      "SINGLE",
-      "Infosec",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Deceive",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Infiltrate",
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Infosec",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Security Ops",
         "Smuggling",
         "Spycraft"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Current Events",
         "Undergrids"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "enforcer": [
-    [
-      "SINGLE",
-      "Fray",
-      30
-    ],
-    [
-      "SINGLE",
-      "Guns",
-      20
-    ],
-    [
-      "SINGLE",
-      "Melee",
-      50
-    ],
-    [
-      "SINGLE",
-      "Provoke",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Fray",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Guns",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Melee",
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Provoke",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Bodyguarding",
         "Racketeering",
         "Security Ops"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Criminal Org Politics",
         "Gambling",
         "Night Clubs"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "explorer": [
-    [
-      "SINGLE",
-      "Athletics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Medicine: Paramedic",
-      20
-    ],
-    [
-      "MULTI",
-      "Pilot",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Athletics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Paramedic",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Pilot",
+      "option": [
         "Air",
         "Ground",
         "Nautical",
         "Space"
       ],
-      20
-    ],
-    [
-      "SINGLE",
-      "Survival",
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Survival",
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "First-Contact Ops",
         "Exploration Ops",
         "Surveying"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Astrobiology",
         "Geology",
         "Xenoarcheology"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "face": [
-    [
-      "SINGLE",
-      "Deceive",
-      40
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Deceive",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Fencing",
         "Police Ops",
         "Smuggling"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Drugs",
         "Underground ExShare"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "genehacker": [
-    [
-      "SINGLE",
-      "Medicine: Biotech",
-      60
-    ],
-    [
-      "SINGLE",
-      "Medicine: Pharmacology",
-      40
-    ],
-    [
-      "SINGLE",
-      "Program",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Biotech",
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Pharmacology",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Biology",
         "Genetics",
         "Physiology"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Lab Ops",
         "Medical Services",
         "Morph Design"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "hacker": [
-    [
-      "SINGLE",
-      "Infosec",
-      60
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      40
-    ],
-    [
-      "SINGLE",
-      "Program",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Infosec",
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Computer Science",
         "Cryptography",
         "Mathematics"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Data Processing",
         "Network Engineering",
         "System Administration"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "investigator": [
-    [
-      "SINGLE",
-      "Kinesics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Perceive",
-      40
-    ],
-    [
-      "SINGLE",
-      "Research",
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Perceive",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Research",
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Ego Hunting",
         "Investigation",
         "Journalism"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Market",
         "Current Events",
         "Criminal Orgs"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "medic": [
-    [
-      "SINGLE",
-      "Kinesics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Medicine: Paramedic",
-      60
-    ],
-    [
-      "SINGLE",
-      "Medicine: Biotech",
-      40
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Paramedic",
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Biotech",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Biology",
         "Genetics",
         "Psychology"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Cr\u00e8che Ops",
         "Emergency Services",
         "Surgical Ops"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "mindhacker": [
-    [
-      "SINGLE",
-      "Infosec",
-      30
-    ],
-    [
-      "SINGLE",
-      "Medicine: Pharmacology",
-      40
-    ],
-    [
-      "SINGLE",
-      "Medicine: Psychosurgery",
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Infosec",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Pharmacology",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Psychosurgery",
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Cognitive Science",
         "Memetics",
         "Psychology"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Cr\u00e8che Ops",
         "Medical Services",
         "Social Services"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "scavenger": [
-    [
-      "MULTI",
-      "Hardware",
-      [
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Electronics",
         "Industrial",
         "Robotics"
       ],
-      60
-    ],
-    [
-      "SINGLE",
-      "Hardware: Demolitions",
-      40
-    ],
-    [
-      "MULTI",
-      "Pilot",
-      [
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Hardware: Demolitions",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Pilot",
+      "option": [
         "Air",
         "Ground",
         "Nautical",
         "Space"
       ],
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Flight Crew Ops",
         "Scavenging",
         "Smuggling"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Spacecraft",
         "Precursor Ruins"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "scientist": [
-    [
-      "MULTI",
-      "Hardware",
-      [
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Electronics",
         "Robotics"
       ],
-      40
-    ],
-    [
-      "SINGLE",
-      "Program",
-      30
-    ],
-    [
-      "SINGLE",
-      "Research",
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Research",
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Astrobiology",
         "Memetics",
         "Physics"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Field Science",
         "Investigation",
         "Lab Ops"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "soldier": [
-    [
-      "SINGLE",
-      "Fray",
-      40
-    ],
-    [
-      "SINGLE",
-      "Guns",
-      60
-    ],
-    [
-      "SINGLE",
-      "Melee",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Fray",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Guns",
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Melee",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Bodyguarding",
         "Military Ops",
         "Security Ops"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Conflict Zones",
         "Gambling",
         "Mercenary Groups"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "technologist": [
-    [
-      "MULTI",
-      "Hardware",
-      [
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Electronics",
         "Industrial",
         "Robotics"
       ],
-      60
-    ],
-    [
-      "SINGLE",
-      "Infosec",
-      40
-    ],
-    [
-      "SINGLE",
-      "Program",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "SINGLE",
+      "option": "Infosec",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Construction",
         "Habitat Ops",
         "Mining",
         "Nanofacturing"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Computer Science",
         "Engineering",
         "Nanotechnology"
       ],
-      30
-    ]
+      "value": 30
+    }
   ]
 }

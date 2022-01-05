@@ -1,535 +1,535 @@
 {
   "construct": [
-    [
-      "SINGLE",
-      "Infosec",
-      50
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      50
-    ],
-    [
-      "SINGLE",
-      "Program",
-      50
-    ],
-    [
-      "SINGLE",
-      "Research",
-      20
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Infosec",
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Research",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Accounting",
         "Administration",
         "System Administration"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Computer Science",
         "Cryptography",
         "Psychometrics"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "freak": [
-    [
-      "SINGLE",
-      "Deceive",
-      40
-    ],
-    [
-      "SINGLE",
-      "Infiltrate",
-      20
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      40
-    ],
-    [
-      "SINGLE",
-      "Perceive",
-      20
-    ],
-    [
-      "SINGLE",
-      "Psi",
-      50
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Deceive",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Infiltrate",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Perceive",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Psi",
+      "value": 50
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Identity Fabrication",
         "Sapient Smuggling"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Privacy",
         "Undergrids",
         "Mind Hacks"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "freelancer": [
-    [
-      "SINGLE",
-      "Interface",
-      40
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      20
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      40
-    ],
-    [
-      "SINGLE",
-      "Program",
-      30
-    ],
-    [
-      "SINGLE",
-      "Research",
-      40
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Research",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Accounting",
         "Data Processing",
         "Freelancing"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Craft Beers",
         "Market Culture",
         "Sports"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "hyperelite": [
-    [
-      "SINGLE",
-      "Athletics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Deceive",
-      30
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      50
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      30
-    ],
-    [
-      "SINGLE",
-      "Provoke",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Athletics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Deceive",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Provoke",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Fine Art",
         "Hypercorp Politics",
         "Stock Market"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Economics",
         "Law",
         "Political Science"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "indenture": [
-    [
-      "DOUBLE",
-      [
+    {
+      "type": "DOUBLE",
+      "option": [
         "Fray",
         "Melee"
       ],
-      20
-    ],
-    [
-      "SINGLE",
-      "Fray or Melee",
-      20
-    ],
-    [
-      "SINGLE",
-      "Free Fall",
-      40
-    ],
-    [
-      "MULTI",
-      "Hardware",
-      [
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Fray or Melee",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Free Fall",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Groundcraft",
         "Industrial",
         "Robotics"
       ],
-      50
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      40
-    ],
-    [
-      "SINGLE",
-      "Perceive",
-      20
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 50
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Perceive",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Asteroid Mining",
         "Habitat Ops",
         "Terraforming"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Gambling",
         "ExShare Dealers"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "loner": [
-    [
-      "SINGLE",
-      "Free Fall",
-      40
-    ],
-    [
-      "SINGLE",
-      "Guns",
-      20
-    ],
-    [
-      "MULTI",
-      "Hardware",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Free Fall",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Guns",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Aerospace",
         "Electronics",
         "Robotics"
       ],
-      40
-    ],
-    [
-      "SINGLE",
-      "Medicine: Paramedic",
-      20
-    ],
-    [
-      "MULTI",
-      "Pilot",
-      [
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Medicine: Paramedic",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Pilot",
+      "option": [
         "Air",
         "Ground",
         "Nautical",
         "Space"
       ],
-      30
-    ],
-    [
-      "SINGLE",
-      "Survival",
-      20
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Survival",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Flight Crew Ops",
         "Gas Mining",
         "Habitat Ops"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Bioconservativism",
         "Conspiracies",
         "Religion",
         "Fringe Politics"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "psionicist": [
-    [
-      "SINGLE",
-      "Athletics",
-      40
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      20
-    ],
-    [
-      "SINGLE",
-      "Perceive",
-      40
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      20
-    ],
-    [
-      "SINGLE",
-      "Psi",
-      50
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Athletics",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Perceive",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Psi",
+      "value": 50
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Protectorate Protocols",
         "Pop Culture",
         "Investigation"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Linguistics",
         "Psychology",
         "Sociology"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "settler": [
-    [
-      "DOUBLE",
-      [
+    {
+      "type": "DOUBLE",
+      "option": [
         "Athletics",
         "Free Fall"
       ],
-      40
-    ],
-    [
-      "SINGLE",
-      "Athletics or Free Fall",
-      40
-    ],
-    [
-      "MULTI",
-      "Hardware",
-      [
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Athletics or Free Fall",
+      "value": 40
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Hardware",
+      "option": [
         "Aerospace",
         "Electronics",
         "Industrial"
       ],
-      40
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      30
-    ],
-    [
-      "MULTI",
-      "Pilot",
-      [
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Pilot",
+      "option": [
         "Air",
         "Ground",
         "Nautical",
         "Space"
       ],
-      30
-    ],
-    [
-      "SINGLE",
-      "Survival",
-      30
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Survival",
+      "value": 30
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Administration",
         "Agriculture Ops",
         "Habitat Ops"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Botany",
         "Chemistry",
         "Engineering",
         "Physics"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "sheltered": [
-    [
-      "SINGLE",
-      "Athletics",
-      40
-    ],
-    [
-      "SINGLE",
-      "Interface",
-      40
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      30
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      20
-    ],
-    [
-      "SINGLE",
-      "Pilot: Ground",
-      20
-    ],
-    [
-      "SINGLE",
-      "Program",
-      20
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Athletics",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Interface",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Pilot: Ground",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Program",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Celebrity Gossip",
         "Pop Culture",
         "Sports"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Economics",
         "Education",
         "Psychology"
       ],
-      30
-    ]
+      "value": 30
+    }
   ],
   "underclass": [
-    [
-      "SINGLE",
-      "Deceive",
-      30
-    ],
-    [
-      "SINGLE",
-      "Fray",
-      20
-    ],
-    [
-      "DOUBLE",
-      [
+    {
+      "type": "SINGLE",
+      "option": "Deceive",
+      "value": 30
+    },
+    {
+      "type": "SINGLE",
+      "option": "Fray",
+      "value": 20
+    },
+    {
+      "type": "DOUBLE",
+      "option": [
         "Guns",
         "Melee"
       ],
-      40
-    ],
-    [
-      "SINGLE",
-      "Guns or Melee",
-      40
-    ],
-    [
-      "SINGLE",
-      "Kinesics",
-      40
-    ],
-    [
-      "SINGLE",
-      "Perceive",
-      20
-    ],
-    [
-      "SINGLE",
-      "Persuade",
-      20
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Guns or Melee",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Kinesics",
+      "value": 40
+    },
+    {
+      "type": "SINGLE",
+      "option": "Perceive",
+      "value": 20
+    },
+    {
+      "type": "SINGLE",
+      "option": "Persuade",
+      "value": 20
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Black Markets",
         "Drugs",
         "Criminal Orgs"
       ],
-      60
-    ],
-    [
-      "MULTI",
-      "Know",
-      [
+      "value": 60
+    },
+    {
+      "type": "MULTI",
+      "prefix": "Know",
+      "option": [
         "Con Artistry",
         "Police Ops",
         "Smuggling"
       ],
-      30
-    ]
+      "value": 30
+    }
   ]
 }

@@ -1,0 +1,66 @@
+{
+  "packageOne": {
+    "description": "This is a test.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "test",
+        "value": 50
+      },
+      {
+        "type": "DOUBLE",
+        "option": [
+          "testOne",
+          "testTwo"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "test",
+        "option": [
+          "testOne",
+          "testTwo",
+          "testThree"
+        ],
+        "value": 70
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  },
+  "packageTwo": {
+    "description": "This is a test.",
+    "skills": [
+      {
+        "type": "SINGLE",
+        "option": "test",
+        "value": 50
+      },
+      {
+        "type": "Double",
+        "option": [
+          "testOne",
+          "testTwo"
+        ],
+        "value": 60
+      },
+      {
+        "type": "MULTI",
+        "prefix": "test",
+        "option": [
+          "testOne",
+          "testTwo",
+          "testThree"
+        ],
+        "value": 70
+      },
+      {
+        "type": "INPUT",
+        "value": 40
+      }
+    ]
+  }
+}

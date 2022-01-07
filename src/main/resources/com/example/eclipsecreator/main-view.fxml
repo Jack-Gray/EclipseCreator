@@ -33,7 +33,6 @@
 -->
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
@@ -44,6 +43,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
@@ -51,244 +51,223 @@
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
 
+<?import com.example.eclipsecreator.RadioToggleButton?>
+
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eclipsecreator.MainController">
     <padding>
         <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
     </padding>
     <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
         <VBox.margin>
-            <Insets/>
+            <Insets />
         </VBox.margin>
         <padding>
-            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+            <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
         </padding>
         <GridPane hgap="24.0">
             <columnConstraints>
-                <ColumnConstraints hgrow="ALWAYS"/>
-                <ColumnConstraints minWidth="-Infinity"/>
+                <ColumnConstraints hgrow="ALWAYS" />
+                <ColumnConstraints minWidth="-Infinity" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints vgrow="SOMETIMES"/>
+                <RowConstraints vgrow="SOMETIMES" />
             </rowConstraints>
             <VBox>
                 <GridPane hgap="8.0" vgap="8.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints vgrow="SOMETIMES"/>
-                        <RowConstraints vgrow="SOMETIMES"/>
-                        <RowConstraints vgrow="SOMETIMES"/>
-                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
+                        <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
                     <VBox>
-                        <TextField fx:id="name_field"/>
-                        <Label minWidth="-Infinity" text="Name"/>
+                        <TextField fx:id="name_field" />
+                        <Label minWidth="-Infinity" text="Name" />
                     </VBox>
                     <VBox GridPane.columnIndex="1">
-                        <TextField fx:id="genderID_field"/>
-                        <Label minWidth="-Infinity" text="Gender Identity"/>
+                        <TextField fx:id="genderID_field" />
+                        <Label minWidth="-Infinity" text="Gender Identity" />
                     </VBox>
                     <VBox GridPane.columnIndex="2">
-                        <TextField fx:id="age_field"/>
-                        <Label minWidth="-Infinity" text="Age"/>
+                        <TextField fx:id="age_field" />
+                        <Label minWidth="-Infinity" text="Age" />
                     </VBox>
                     <VBox GridPane.rowIndex="1">
-                        <TextField fx:id="background_field"/>
-                        <Label minWidth="-Infinity" text="Background"/>
+                        <TextField fx:id="background_field" />
+                        <Label minWidth="-Infinity" text="Background" />
                     </VBox>
                     <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                        <TextField fx:id="career_field"/>
-                        <Label minWidth="-Infinity" text="Career"/>
+                        <TextField fx:id="career_field" />
+                        <Label minWidth="-Infinity" text="Career" />
                     </VBox>
                     <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
-                        <TextField fx:id="interest_field"/>
-                        <Label minWidth="-Infinity" text="Interest"/>
+                        <TextField fx:id="interest_field" />
+                        <Label minWidth="-Infinity" text="Interest" />
                     </VBox>
                     <VBox GridPane.rowIndex="2">
-                        <TextField fx:id="faction_field"/>
-                        <Label minWidth="-Infinity" text="Faction"/>
+                        <TextField fx:id="faction_field" />
+                        <Label minWidth="-Infinity" text="Faction" />
                     </VBox>
                     <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
-                        <TextField fx:id="race_field"/>
-                        <Label minWidth="-Infinity" text="Race"/>
+                        <TextField fx:id="race_field" />
+                        <Label minWidth="-Infinity" text="Race" />
                     </VBox>
                     <VBox GridPane.columnIndex="2" GridPane.rowIndex="2">
-                        <TextField fx:id="cp_field"/>
-                        <Label minWidth="-Infinity" text="CP"/>
+                        <TextField fx:id="cp_field" />
+                        <Label minWidth="-Infinity" text="CP" />
                     </VBox>
                     <VBox GridPane.rowIndex="3">
-                        <TextField fx:id="motivation1_field"/>
-                        <Label minWidth="-Infinity" text="Motivation 1"/>
+                        <TextField fx:id="motivation1_field" />
+                        <Label minWidth="-Infinity" text="Motivation 1" />
                     </VBox>
                     <VBox GridPane.columnIndex="1" GridPane.rowIndex="3">
-                        <TextField fx:id="motivation2_field"/>
-                        <Label minWidth="-Infinity" text="Motivation 2"/>
+                        <TextField fx:id="motivation2_field" />
+                        <Label minWidth="-Infinity" text="Motivation 2" />
                     </VBox>
                     <VBox GridPane.columnIndex="2" GridPane.rowIndex="3">
-                        <TextField fx:id="motivation3_field"/>
-                        <Label minWidth="-Infinity" text="Motivation 3"/>
+                        <TextField fx:id="motivation3_field" />
+                        <Label minWidth="-Infinity" text="Motivation 3" />
                     </VBox>
                 </GridPane>
                 <GridPane hgap="8.0">
                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                     </columnConstraints>
                     <rowConstraints>
-                        <RowConstraints vgrow="SOMETIMES"/>
+                        <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
-                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ego"/>
-                    <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Skills"
-                            GridPane.columnIndex="1"/>
+                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ego" />
+                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Skills" GridPane.columnIndex="1" />
                     <VBox.margin>
-                        <Insets top="32.0"/>
+                        <Insets top="32.0" />
                     </VBox.margin>
                 </GridPane>
                 <VBox>
                     <VBox.margin>
-                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                        <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                     </VBox.margin>
                     <VBox minHeight="-Infinity" spacing="8.0">
                         <VBox>
-                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="APTITUDES"/>
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="APTITUDES" />
                             <VBox spacing="8.0">
                                 <TilePane alignment="CENTER" hgap="16.0" vgap="8.0">
                                     <VBox>
-                                        <Spinner fx:id="cognition_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
-                                               text="COGNITION"/>
+                                        <Spinner fx:id="cognition_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="COGNITION" />
                                     </VBox>
                                     <VBox>
-                                        <Spinner fx:id="intuition_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
-                                               text="INTUITION"/>
+                                        <Spinner fx:id="intuition_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="INTUITION" />
                                     </VBox>
                                     <VBox>
-                                        <Spinner fx:id="reflexes_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="REFLEXES"/>
+                                        <Spinner fx:id="reflexes_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="REFLEXES" />
                                     </VBox>
                                     <VBox>
-                                        <Spinner fx:id="savvy_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="SAVVY"/>
+                                        <Spinner fx:id="savvy_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="SAVVY" />
                                     </VBox>
                                     <VBox>
-                                        <Spinner fx:id="somatics_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="SOMATICS"/>
+                                        <Spinner fx:id="somatics_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="SOMATICS" />
                                     </VBox>
                                     <VBox>
-                                        <Spinner fx:id="willpower_spinner" maxWidth="1.7976931348623157E308"
-                                                 prefWidth="0.0"/>
-                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308"
-                                               text="WILLPOWER"/>
+                                        <Spinner fx:id="willpower_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
+                                        <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="WILLPOWER" />
                                     </VBox>
                                 </TilePane>
-                                <Label fx:id="aptitudeRemaining_label" alignment="CENTER"
-                                       maxWidth="1.7976931348623157E308" text="Label"/>
+                                <Label fx:id="aptitudeRemaining_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
                                 <padding>
-                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                 </padding>
                             </VBox>
                         </VBox>
                         <VBox>
-                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="MENTAL STATS"/>
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="MENTAL STATS" />
                             <GridPane hgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
                                 <VBox.margin>
-                                    <Insets/>
+                                    <Insets />
                                 </VBox.margin>
                                 <padding>
-                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                 </padding>
                                 <VBox>
-                                    <Label fx:id="traumaThreshold_label" alignment="CENTER"
-                                           maxWidth="1.7976931348623157E308" text="Label"/>
-                                    <Separator/>
-                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity"
-                                           text="TRAUMA THRESHOLD"/>
+                                    <Label fx:id="traumaThreshold_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
+                                    <Separator />
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="TRAUMA THRESHOLD" />
                                 </VBox>
                                 <VBox GridPane.columnIndex="1">
-                                    <Label fx:id="lucidity_label" alignment="CENTER"
-                                           maxWidth="1.7976931348623157E308" text="Label"/>
-                                    <Separator/>
-                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity"
-                                           text="LUCIDITY"/>
+                                    <Label fx:id="lucidity_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
+                                    <Separator />
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="LUCIDITY" />
                                 </VBox>
                                 <VBox GridPane.columnIndex="2">
-                                    <Label fx:id="insanityRating_label" alignment="CENTER"
-                                           maxWidth="1.7976931348623157E308" text="Label"/>
-                                    <Separator/>
-                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity"
-                                           text="INSANITY RATING"/>
+                                    <Label fx:id="insanityRating_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
+                                    <Separator />
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="INSANITY RATING" />
                                 </VBox>
                             </GridPane>
                         </VBox>
                         <VBox>
-                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="DERIVED STATS"/>
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="DERIVED STATS" />
                             <GridPane hgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
                                 <padding>
-                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0"/>
+                                    <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                                 </padding>
                                 <VBox>
-                                    <Label fx:id="initiative_label" alignment="CENTER"
-                                           maxWidth="1.7976931348623157E308" text="Label"/>
-                                    <Separator/>
-                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity"
-                                           text="INITIATIVE"/>
+                                    <Label fx:id="initiative_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
+                                    <Separator />
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="INITIATIVE" />
                                 </VBox>
                                 <VBox GridPane.columnIndex="1">
-                                    <Label fx:id="basicPerception_label" alignment="CENTER"
-                                           maxWidth="1.7976931348623157E308" text="Label"/>
-                                    <Separator/>
-                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity"
-                                           text="BASIC PERCEPTION"/>
+                                    <Label fx:id="basicPerception_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
+                                    <Separator />
+                                    <Label alignment="CENTER" maxWidth="1.7976931348623157E308" minWidth="-Infinity" text="BASIC PERCEPTION" />
                                 </VBox>
                             </GridPane>
                         </VBox>
                     </VBox>
                     <VBox spacing="8.0">
                         <VBox>
-                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="KNOW SKILLS"/>
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="KNOW SKILLS" />
                             <TableView fx:id="knowSkills_table">
                                 <columns>
-                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1"/>
-                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2"/>
+                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
+                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
                                 </columns>
                             </TableView>
-                            <Label fx:id="knowRemaining_label" alignment="CENTER" maxWidth="1.7976931348623157E308"
-                                   text="Label"/>
+                            <Label fx:id="knowRemaining_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
                         </VBox>
                         <VBox>
-                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="ACTIVE SKILLS"/>
+                            <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="ACTIVE SKILLS" />
                             <TableView fx:id="activeSkills_table">
                                 <columns>
-                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1"/>
-                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2"/>
+                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
+                                    <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
                                 </columns>
                             </TableView>
-                            <Label fx:id="activeRemaining_label" alignment="CENTER" maxWidth="1.7976931348623157E308"
-                                   text="Label"/>
+                            <Label fx:id="activeRemaining_label" alignment="CENTER" maxWidth="1.7976931348623157E308" text="Label" />
                         </VBox>
                     </VBox>
                 </VBox>
@@ -297,135 +276,109 @@
                 <Tab text="Race">
                     <VBox spacing="16.0">
                         <padding>
-                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                         </padding>
                         <GridPane hgap="8.0" vgap="8.0">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
                             </rowConstraints>
-                            <Button fx:id="anisaeva_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Anisaeva" GridPane.columnSpan="2"/>
-                            <Button fx:id="bilago_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Bilago" GridPane.columnIndex="2" GridPane.columnSpan="2"/>
-                            <Button fx:id="callihara_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Callihara" GridPane.columnIndex="4" GridPane.columnSpan="2"/>
-                            <Button fx:id="colonist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Colonist" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
-                            <Button fx:id="kellek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Kellek" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-                            <Button fx:id="djek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Djek" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
-                            <Button fx:id="exith_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Exith" GridPane.columnIndex="4" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="1"/>
-                            <Button fx:id="naora_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Naora" GridPane.columnIndex="2" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="2"/>
-                            <Button fx:id="okex_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Okex" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-                            <Button fx:id="sekkess_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Sekkess" GridPane.columnIndex="1" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="3"/>
-                            <Button fx:id="senn_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Senn" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
+                            <RadioToggleButton fx:id="anisaeva_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Anisaeva" GridPane.columnSpan="2">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="race_toggleGroup" />
+                        </toggleGroup></RadioToggleButton>
+                            <RadioToggleButton fx:id="bilago_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Bilago" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                            <RadioToggleButton fx:id="callihara_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Callihara" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                            <RadioToggleButton fx:id="colonist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Colonist" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="kellek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kellek" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="djek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Djek" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="exith_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Exith" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="naora_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Naora" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="okex_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Okex" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="sekkess_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sekkess" toggleGroup="$race_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton fx:id="senn_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Senn" toggleGroup="$race_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                         </GridPane>
                         <ScrollPane fitToWidth="true" prefWidth="0.0">
                             <VBox.margin>
-                                <Insets top="8.0"/>
+                                <Insets top="8.0" />
                             </VBox.margin>
-                            <TextArea fx:id="race_desc" wrapText="true"/>
+                            <TextArea fx:id="race_desc" wrapText="true" />
                         </ScrollPane>
                     </VBox>
                 </Tab>
                 <Tab text="Background">
                     <VBox spacing="16.0">
                         <padding>
-                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                         </padding>
                         <VBox spacing="8.0">
                             <GridPane hgap="8.0" vgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <Button fx:id="construct_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Construct" GridPane.columnSpan="2"/>
-                                <Button fx:id="freelancer_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Freelancer" GridPane.columnIndex="2"
-                                        GridPane.columnSpan="2"/>
-                                <Button fx:id="hyperelite_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Hyperelite" GridPane.columnIndex="4"
-                                        GridPane.columnSpan="2"/>
-                                <Button fx:id="indenture_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Indenture" GridPane.columnSpan="2"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="loner_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Loner" GridPane.columnIndex="2" GridPane.columnSpan="2"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="settler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Settler" GridPane.columnIndex="4" GridPane.columnSpan="2"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="sheltered_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Sheltered" GridPane.columnIndex="1"
-                                        GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-                                <Button fx:id="underclass_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Underclass" GridPane.columnIndex="3"
-                                        GridPane.columnSpan="2" GridPane.rowIndex="2"/>
+                                <RadioToggleButton fx:id="construct_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Construct" GridPane.columnSpan="2">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="background_toggleGroup" />
+                           </toggleGroup></RadioToggleButton>
+                                <RadioToggleButton fx:id="freelancer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freelancer" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                                <RadioToggleButton fx:id="hyperelite_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hyperelite" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                                <RadioToggleButton fx:id="indenture_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Indenture" toggleGroup="$background_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="loner_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Loner" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="settler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Settler" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="sheltered_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sheltered" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <RadioToggleButton fx:id="underclass_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Underclass" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                             </GridPane>
                             <HBox spacing="8.0">
-                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
-                                <Label text="Psi Backgrounds"/>
-                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                <Label text="Psi Backgrounds" />
+                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                             </HBox>
                             <GridPane hgap="8.0" vgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <Button fx:id="freak_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Freak" GridPane.columnIndex="1" GridPane.columnSpan="2"/>
-                                <Button fx:id="psionicist_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Psionicist" GridPane.columnIndex="3"
-                                        GridPane.columnSpan="2"/>
+                                <RadioToggleButton fx:id="freak_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freak" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                                <RadioToggleButton fx:id="psionicist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionicist" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" />
                             </GridPane>
                         </VBox>
                         <ScrollPane fitToWidth="true" prefWidth="0.0">
                             <VBox.margin>
-                                <Insets top="8.0"/>
+                                <Insets top="8.0" />
                             </VBox.margin>
                             <VBox spacing="8.0">
-                                <TextArea fx:id="background_desc" wrapText="true"/>
+                                <TextArea fx:id="background_desc" wrapText="true" />
                                 <TableView fx:id="background_table">
                                     <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1"/>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2"/>
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
                                     </columns>
                                 </TableView>
                             </VBox>
@@ -435,73 +388,52 @@
                 <Tab text="Career">
                     <VBox spacing="16.0">
                         <padding>
-                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                         </padding>
                         <GridPane hgap="8.0" vgap="8.0">
                             <columnConstraints>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                             </columnConstraints>
                             <rowConstraints>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
-                                <RowConstraints vgrow="SOMETIMES"/>
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
+                                <RowConstraints vgrow="SOMETIMES" />
                             </rowConstraints>
-                            <Button fx:id="academic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Academic" textOverrun="CLIP" GridPane.columnSpan="2"/>
-                            <Button fx:id="covertOps_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Covert Ops" textOverrun="CLIP" GridPane.columnIndex="2"
-                                    GridPane.columnSpan="2"/>
-                            <Button fx:id="enforcer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Enforcer" textOverrun="CLIP" GridPane.columnIndex="4"
-                                    GridPane.columnSpan="2"/>
-                            <Button fx:id="explorer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Explorer" textOverrun="CLIP" GridPane.columnSpan="2" GridPane.rowIndex="1"/>
-                            <Button fx:id="face_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Face" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="1"/>
-                            <Button fx:id="genehacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Genehacker" textOverrun="CLIP" GridPane.columnIndex="4"
-                                    GridPane.columnSpan="2" GridPane.rowIndex="1"/>
-                            <Button fx:id="hacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Hacker" textOverrun="CLIP" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-                            <Button fx:id="investigator_button" maxWidth="1.7976931348623157E308"
-                                    mnemonicParsing="false" text="Investigator" textOverrun="CLIP"
-                                    GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2"/>
-                            <Button fx:id="medic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Medic" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="2"/>
-                            <Button fx:id="mindhacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Mindhacker" textOverrun="CLIP" GridPane.columnSpan="2" GridPane.rowIndex="3"/>
-                            <Button fx:id="scavenger_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Scavenger" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="3"/>
-                            <Button fx:id="scientist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Scientist" textOverrun="CLIP" GridPane.columnIndex="4" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="3"/>
-                            <Button fx:id="soldier_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                    text="Soldier" textOverrun="CLIP" GridPane.columnIndex="1" GridPane.columnSpan="2"
-                                    GridPane.rowIndex="4"/>
-                            <Button fx:id="technologist_button" maxWidth="1.7976931348623157E308"
-                                    mnemonicParsing="false" text="Technologist" textOverrun="CLIP"
-                                    GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4"/>
+                            <RadioToggleButton fx:id="academic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Academic" textOverrun="CLIP" GridPane.columnSpan="2">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="career_toggleGroup" />
+                        </toggleGroup></RadioToggleButton>
+                            <RadioToggleButton fx:id="covertOps_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Covert Ops" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                            <RadioToggleButton fx:id="enforcer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enforcer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                            <RadioToggleButton fx:id="explorer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Explorer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="face_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Face" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="genehacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Genehacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton fx:id="hacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="investigator_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Investigator" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="medic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Medic" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton fx:id="mindhacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Mindhacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton fx:id="scavenger_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scavenger" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton fx:id="scientist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scientist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton fx:id="soldier_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Soldier" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                            <RadioToggleButton fx:id="technologist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Technologist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
                         </GridPane>
                         <ScrollPane fitToWidth="true" prefWidth="0.0">
                             <VBox.margin>
-                                <Insets top="8.0"/>
+                                <Insets top="8.0" />
                             </VBox.margin>
                             <VBox spacing="8.0">
-                                <TextArea fx:id="career_desc" wrapText="true"/>
+                                <TextArea fx:id="career_desc" wrapText="true" />
                                 <TableView fx:id="career_table">
                                     <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1"/>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2"/>
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
                                     </columns>
                                 </TableView>
                             </VBox>
@@ -511,93 +443,68 @@
                 <Tab text="Interest">
                     <VBox spacing="16.0">
                         <padding>
-                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0"/>
+                            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
                         </padding>
                         <VBox spacing="8.0">
                             <GridPane hgap="8.0" vgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <Button fx:id="artistIcon_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Artist/Icon" textOverrun="CLIP"/>
-                                <Button fx:id="fighter_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Fighter" textOverrun="CLIP" GridPane.columnIndex="1"/>
-                                <Button fx:id="firstAider_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="First Aider" textOverrun="CLIP"
-                                        GridPane.columnIndex="2"/>
-                                <Button fx:id="forensics_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Forensics" textOverrun="CLIP"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="networker_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Networker" textOverrun="CLIP"
-                                        GridPane.rowIndex="2"/>
-                                <Button fx:id="remoteOps_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Remote Ops" textOverrun="CLIP"
-                                        GridPane.rowIndex="3"/>
-                                <Button fx:id="student_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Student" textOverrun="CLIP" GridPane.rowIndex="4"/>
-                                <Button fx:id="handler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Handler" textOverrun="CLIP" GridPane.columnIndex="1"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="pantologist_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Pantologist" textOverrun="CLIP"
-                                        GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                                <Button fx:id="reprobate_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Reprobate" textOverrun="CLIP"
-                                        GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                                <Button fx:id="survivalist_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Survivalist" textOverrun="CLIP"
-                                        GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-                                <Button fx:id="leader_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Leader" textOverrun="CLIP" GridPane.columnIndex="2"
-                                        GridPane.rowIndex="1"/>
-                                <Button fx:id="pilot_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Pilot" textOverrun="CLIP" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-                                <Button fx:id="slacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Slacker" textOverrun="CLIP" GridPane.columnIndex="2"
-                                        GridPane.rowIndex="3"/>
-                                <Button fx:id="voyager_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false"
-                                        text="Voyager" textOverrun="CLIP" GridPane.columnIndex="2"
-                                        GridPane.rowIndex="4"/>
+                                <RadioToggleButton fx:id="artistIcon_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Artist/Icon" textOverrun="CLIP">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="interest_toggleGroup" />
+                           </toggleGroup></RadioToggleButton>
+                                <RadioToggleButton fx:id="fighter_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Fighter" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
+                                <RadioToggleButton fx:id="firstAider_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="First Aider" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" />
+                                <RadioToggleButton fx:id="forensics_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Forensics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="networker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Networker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="2" />
+                                <RadioToggleButton fx:id="remoteOps_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Remote Ops" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="3" />
+                                <RadioToggleButton fx:id="student_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Student" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="4" />
+                                <RadioToggleButton fx:id="handler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Handler" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="pantologist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pantologist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <RadioToggleButton fx:id="reprobate_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Reprobate" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <RadioToggleButton fx:id="survivalist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Survivalist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <RadioToggleButton fx:id="leader_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Leader" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton fx:id="pilot_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pilot" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                <RadioToggleButton fx:id="slacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Slacker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                <RadioToggleButton fx:id="voyager_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Voyager" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                             </GridPane>
                             <HBox spacing="8.0">
-                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
-                                <Label alignment="CENTER" text="Psi Interests" HBox.hgrow="ALWAYS"/>
-                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS"/>
+                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
+                                <Label alignment="CENTER" text="Psi Interests" HBox.hgrow="ALWAYS" />
+                                <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
                             </HBox>
                             <GridPane hgap="8.0" vgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0"/>
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
                                 </columnConstraints>
                                 <rowConstraints>
-                                    <RowConstraints vgrow="SOMETIMES"/>
+                                    <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <Button fx:id="psionics_button" maxWidth="1.7976931348623157E308"
-                                        mnemonicParsing="false" text="Psionics" textOverrun="CLIP"
-                                        GridPane.columnIndex="1"/>
+                                <RadioToggleButton fx:id="psionics_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
                             </GridPane>
                         </VBox>
                         <ScrollPane fitToWidth="true" prefWidth="0.0">
                             <VBox.margin>
-                                <Insets top="8.0"/>
+                                <Insets top="8.0" />
                             </VBox.margin>
                             <VBox spacing="8.0">
-                                <TextArea fx:id="interest_desc" wrapText="true"/>
+                                <TextArea fx:id="interest_desc" wrapText="true" />
                                 <TableView fx:id="interest_table">
                                     <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1"/>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2"/>
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
+                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
                                     </columns>
                                 </TableView>
                             </VBox>

@@ -4,90 +4,184 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
 public class MainController {
-    public Button anisaeva_button;
-    public Button bilago_button;
-    public Button callihara_button;
-    public Button colonist_button;
-    public Button kellek_button;
-    public Button djek_button;
-    public Button exith_button;
-    public Button naora_button;
-    public Button okex_button;
-    public Button sekkess_button;
-    public Button senn_button;
-    public Button construct_button;
-    public Button freelancer_button;
-    public Button hyperelite_button;
-    public Button indenture_button;
-    public Button loner_button;
-    public Button settler_button;
-    public Button sheltered_button;
-    public Button underclass_button;
-    public Button freak_button;
-    public Button psionicist_button;
-    public Button academic_button;
-    public Button covertOps_button;
-    public Button enforcer_button;
-    public Button explorer_button;
-    public Button face_button;
-    public Button genehacker_button;
-    public Button hacker_button;
-    public Button investigator_button;
-    public Button medic_button;
-    public Button mindhacker_button;
-    public Button scavenger_button;
-    public Button scientist_button;
-    public Button soldier_button;
-    public Button technologist_button;
-    public Button artistIcon_button;
-    public Button fighter_button;
-    public Button firstAider_button;
-    public Button forensics_button;
-    public Button networker_button;
-    public Button remoteOps_button;
-    public Button student_button;
-    public Button handler_button;
-    public Button pantologist_button;
-    public Button reprobate_button;
-    public Button survivalist_button;
-    public Button leader_button;
-    public Button pilot_button;
-    public Button slacker_button;
-    public Button voyager_button;
-    public Button psionics_button;
-    public TextArea race_desc;
-    public TextArea background_desc;
-    public TextArea career_desc;
-    public TextArea interest_desc;
-    public TableView background_table;
-    public TableView career_table;
-    public TableView interest_table;
-    public TextField name_field;
-    public TextField genderID_field;
-    public TextField age_field;
-    public TextField background_field;
-    public TextField career_field;
-    public TextField interest_field;
-    public TextField faction_field;
-    public TextField race_field;
-    public TextField cp_field;
-    public TextField motivation1_field;
-    public TextField motivation2_field;
-    public TextField motivation3_field;
-    public Spinner<Integer> cognition_spinner;
-    public Spinner<Integer> intuition_spinner;
-    public Spinner<Integer> reflexes_spinner;
-    public Spinner<Integer> savvy_spinner;
-    public Spinner<Integer> somatics_spinner;
-    public Spinner<Integer> willpower_spinner;
-    public Label aptitudeRemaining_label;
-    public Label traumaThreshold_label;
-    public Label lucidity_label;
-    public Label insanityRating_label;
-    public Label initiative_label;
-    public Label basicPerception_label;
-    public TableView knowSkills_table;
-    public Label knowRemaining_label;
-    public TableView activeSkills_table;
-    public Label activeRemaining_label;
+    @FXML
+    private ToggleGroup race_toggleGroup;
+    @FXML
+    private ToggleGroup background_toggleGroup;
+    @FXML
+    private ToggleGroup career_toggleGroup;
+    @FXML
+    private ToggleGroup interest_toggleGroup;
+    @FXML
+    private RadioToggleButton anisaeva_button;
+    @FXML
+    private RadioToggleButton bilago_button;
+    @FXML
+    private RadioToggleButton callihara_button;
+    @FXML
+    private RadioToggleButton colonist_button;
+    @FXML
+    private RadioToggleButton kellek_button;
+    @FXML
+    private RadioToggleButton djek_button;
+    @FXML
+    private RadioToggleButton exith_button;
+    @FXML
+    private RadioToggleButton naora_button;
+    @FXML
+    private RadioToggleButton okex_button;
+    @FXML
+    private RadioToggleButton sekkess_button;
+    @FXML
+    private RadioToggleButton senn_button;
+    @FXML
+    private RadioToggleButton construct_button;
+    @FXML
+    private RadioToggleButton freelancer_button;
+    @FXML
+    private RadioToggleButton hyperelite_button;
+    @FXML
+    private RadioToggleButton indenture_button;
+    @FXML
+    private RadioToggleButton loner_button;
+    @FXML
+    private RadioToggleButton settler_button;
+    @FXML
+    private RadioToggleButton sheltered_button;
+    @FXML
+    private RadioToggleButton underclass_button;
+    @FXML
+    private RadioToggleButton freak_button;
+    @FXML
+    private RadioToggleButton psionicist_button;
+    @FXML
+    private RadioToggleButton academic_button;
+    @FXML
+    private RadioToggleButton covertOps_button;
+    @FXML
+    private RadioToggleButton enforcer_button;
+    @FXML
+    private RadioToggleButton explorer_button;
+    @FXML
+    private RadioToggleButton face_button;
+    @FXML
+    private RadioToggleButton genehacker_button;
+    @FXML
+    private RadioToggleButton hacker_button;
+    @FXML
+    private RadioToggleButton investigator_button;
+    @FXML
+    private RadioToggleButton medic_button;
+    @FXML
+    private RadioToggleButton mindhacker_button;
+    @FXML
+    private RadioToggleButton scavenger_button;
+    @FXML
+    private RadioToggleButton scientist_button;
+    @FXML
+    private RadioToggleButton soldier_button;
+    @FXML
+    private RadioToggleButton technologist_button;
+    @FXML
+    private RadioToggleButton artistIcon_button;
+    @FXML
+    private RadioToggleButton fighter_button;
+    @FXML
+    private RadioToggleButton firstAider_button;
+    @FXML
+    private RadioToggleButton forensics_button;
+    @FXML
+    private RadioToggleButton networker_button;
+    @FXML
+    private RadioToggleButton remoteOps_button;
+    @FXML
+    private RadioToggleButton student_button;
+    @FXML
+    private RadioToggleButton handler_button;
+    @FXML
+    private RadioToggleButton pantologist_button;
+    @FXML
+    private RadioToggleButton reprobate_button;
+    @FXML
+    private RadioToggleButton survivalist_button;
+    @FXML
+    private RadioToggleButton leader_button;
+    @FXML
+    private RadioToggleButton pilot_button;
+    @FXML
+    private RadioToggleButton slacker_button;
+    @FXML
+    private RadioToggleButton voyager_button;
+    @FXML
+    private RadioToggleButton psionics_button;
+    @FXML
+    private TextArea race_desc;
+    @FXML
+    private TextArea background_desc;
+    @FXML
+    private TextArea career_desc;
+    @FXML
+    private TextArea interest_desc;
+    @FXML
+    private TableView<Skill> background_table;
+    @FXML
+    private TableView<Skill> career_table;
+    @FXML
+    private TableView<Skill> interest_table;
+    @FXML
+    private TextField name_field;
+    @FXML
+    private TextField genderID_field;
+    @FXML
+    private TextField age_field;
+    @FXML
+    private TextField background_field;
+    @FXML
+    private TextField career_field;
+    @FXML
+    private TextField interest_field;
+    @FXML
+    private TextField faction_field;
+    @FXML
+    private TextField race_field;
+    @FXML
+    private TextField cp_field;
+    @FXML
+    private TextField motivation1_field;
+    @FXML
+    private TextField motivation2_field;
+    @FXML
+    private TextField motivation3_field;
+    @FXML
+    private Spinner<Integer> cognition_spinner;
+    @FXML
+    private Spinner<Integer> intuition_spinner;
+    @FXML
+    private Spinner<Integer> reflexes_spinner;
+    @FXML
+    private Spinner<Integer> savvy_spinner;
+    @FXML
+    private Spinner<Integer> somatics_spinner;
+    @FXML
+    private Spinner<Integer> willpower_spinner;
+    @FXML
+    private Label aptitudeRemaining_label;
+    @FXML
+    private Label traumaThreshold_label;
+    @FXML
+    private Label lucidity_label;
+    @FXML
+    private Label insanityRating_label;
+    @FXML
+    private Label initiative_label;
+    @FXML
+    private Label basicPerception_label;
+    @FXML
+    private TableView<Skill> knowSkills_table;
+    @FXML
+    private Label knowRemaining_label;
+    @FXML
+    private TableView<Skill> activeSkills_table;
+    @FXML
+    private Label activeRemaining_label;
 }

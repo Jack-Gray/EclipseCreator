@@ -12,41 +12,59 @@ import java.util.ArrayList;
 public class PackageDao {
 
     private final String contentRoot = "src/main/resources/com/example/eclipsecreator/";
+    private final ArrayList<OriginPackage> racePackages = new ArrayList<>();
+    private final ArrayList<SkillPackage> skillPackages = new ArrayList<>();
 
     public PackageDao() {
     }
 
-    OriginPackage findRacePackage(String name) throws IOException {
+    public OriginPackage findRacePackage(String name) throws IOException {
         OriginPackage racePackage;
+        OriginPackage foundPackage = findPackageWithName(racePackages, name);
 
-        String fileName = contentRoot + "raceData.json";
-        // retrieve description from raceData.json
-        Object object = getDataFromFile(fileName, name);
+        if (foundPackage != null){
+            racePackage = foundPackage;
+        } else {
+            String fileName = contentRoot + "raceData.json";
+            racePackage = getPackageFromFile(fileName, name);
+            racePackages.add(racePackage);
+        }
 
-        String description = (String) object;
-        racePackage = new OriginPackage(name, description);
         return racePackage;
     }
 
-    SkillPackage findSkillPackage(String name, String category) throws IOException {
+    public SkillPackage findSkillPackage(String name, String category) throws IOException {
         SkillPackage skillPackage;
+        OriginPackage foundPackage = findPackageWithName(skillPackages, name);
 
-        String fileName = contentRoot + String.format("%sData.json", category);
-        Object object = getDataFromFile(fileName, name);
-        JSONObject jsonObject = (JSONObject) object;
-        JSONArray jsonArray = jsonObject.getJSONArray("skills");
-
-        String description = jsonObject.getString("description");
-        ArrayList<Skill> skillArrayList = createSkillList(jsonArray);
-        skillPackage = new SkillPackage(name, description, skillArrayList);
+        if (foundPackage != null){
+            skillPackage = (SkillPackage) foundPackage;
+        } else {
+            String fileName = contentRoot + String.format("%sData.json", category);
+            skillPackage = (SkillPackage) getPackageFromFile(fileName, name);
+            skillPackages.add(skillPackage);
+        }
+        
         return skillPackage;
     }
 
-    private Object getDataFromFile(String fileName, String key) throws IOException {
+    private OriginPackage getPackageFromFile(String fileName, String name) throws IOException {
         FileReader reader = new FileReader(fileName);
-        Object object = new JSONObject(new JSONTokener(new BufferedReader(reader))).get(key);
+        Object object = new JSONObject(new JSONTokener(new BufferedReader(reader))).get(name);
         reader.close();
-        return object;
+
+        OriginPackage originPackage;
+        assert(object instanceof String || object instanceof JSONObject);
+        if(object instanceof String description){
+            originPackage = new OriginPackage(name, description);
+        } else {
+            JSONObject jsonObject = (JSONObject) object;
+            String description = jsonObject.getString("description");
+            JSONArray jsonArray = jsonObject.getJSONArray("skills");
+            ArrayList<Skill> skillArrayList = createSkillList(jsonArray);
+            originPackage = new SkillPackage(name, description, skillArrayList);
+        }
+        return originPackage;
     }
 
     private ArrayList<Skill> createSkillList(JSONArray jsonArray) {
@@ -88,5 +106,9 @@ public class PackageDao {
             skillArrayList.add(skill);
         }
         return skillArrayList;
+    }
+
+    private OriginPackage findPackageWithName(ArrayList<? extends OriginPackage> arrayList, String name){
+        return arrayList.stream().filter(o -> o.getName().equals(name)).findFirst().orElse(null);
     }
 }

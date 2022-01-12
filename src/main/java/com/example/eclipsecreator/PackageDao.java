@@ -73,27 +73,31 @@ public class PackageDao {
             JSONObject jsonObject = jsonArray.getJSONObject(i);
             Skill skill;
             SkillType skillType;
-            String prefix;
-            ArrayList<String> option;
+            String prefix = null;
+            ArrayList<String> option = null;
             int value;
 
             String type = jsonObject.getString("type");
             skillType = SkillType.valueOf(type);
 
-            prefix = jsonObject.getString("prefix");
+            if(jsonObject.has("prefix")) {
+                prefix = jsonObject.getString("prefix");
+            }
 
-            Object object = jsonObject.get("option");
-            if (object != null) {
+            if(jsonObject.has("option")) {
                 option = new ArrayList<>();
-                if (object instanceof String string) {
-                    option.add(string);
-                } else if (object instanceof JSONArray array) {
-                    for (int j = 0; j < array.length(); j++) {
-                        option.add(array.getString(j));
+                Object object = jsonObject.get("option");
+                if (object != null) {
+                    if (object instanceof String string) {
+                        option.add(string);
+                    } else if (object instanceof JSONArray array) {
+                        for (int j = 0; j < array.length(); j++) {
+                            option.add(array.getString(j));
+                        }
                     }
+                } else {
+                    option = null;
                 }
-            } else {
-                option = null;
             }
 
             value = jsonObject.getInt("value");

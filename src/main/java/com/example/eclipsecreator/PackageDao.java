@@ -18,7 +18,7 @@ public class PackageDao {
     public PackageDao() {
     }
 
-    public OriginPackage findRacePackage(String name) throws IOException {
+    public OriginPackage findRacePackage(String name){
         OriginPackage racePackage;
         OriginPackage foundPackage = findPackageWithName(racePackages, name);
 
@@ -33,7 +33,7 @@ public class PackageDao {
         return racePackage;
     }
 
-    public SkillPackage findSkillPackage(String name, String category) throws IOException {
+    public SkillPackage findSkillPackage(String name, String category){
         SkillPackage skillPackage;
         OriginPackage foundPackage = findPackageWithName(skillPackages, name);
 
@@ -48,10 +48,16 @@ public class PackageDao {
         return skillPackage;
     }
 
-    private OriginPackage getPackageFromFile(String fileName, String name) throws IOException {
-        FileReader reader = new FileReader(fileName);
-        Object object = new JSONObject(new JSONTokener(new BufferedReader(reader))).get(name);
-        reader.close();
+    private OriginPackage getPackageFromFile(String fileName, String name){
+        FileReader reader;
+        Object object = null;
+        try {
+            reader = new FileReader(fileName);
+            object = new JSONObject(new JSONTokener(new BufferedReader(reader))).get(name);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         OriginPackage originPackage;
         assert(object instanceof String || object instanceof JSONObject);
@@ -95,8 +101,6 @@ public class PackageDao {
                             option.add(array.getString(j));
                         }
                     }
-                } else {
-                    option = null;
                 }
             }
 

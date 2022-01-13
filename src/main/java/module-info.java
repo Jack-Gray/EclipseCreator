@@ -10,6 +10,7 @@ module com.example.eclipsecreator {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires org.json;
+    requires org.apache.commons.lang3;
 
     opens com.example.eclipsecreator to javafx.fxml;
     exports com.example.eclipsecreator;

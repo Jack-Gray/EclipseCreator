@@ -95,15 +95,15 @@
                         <Label minWidth="-Infinity" text="Age" />
                     </VBox>
                     <VBox GridPane.rowIndex="1">
-                        <TextField fx:id="background_field" />
+                        <TextField fx:id="background_field" editable="false" />
                         <Label minWidth="-Infinity" text="Background" />
                     </VBox>
                     <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                        <TextField fx:id="career_field" />
+                        <TextField fx:id="career_field" editable="false"/>
                         <Label minWidth="-Infinity" text="Career" />
                     </VBox>
                     <VBox GridPane.columnIndex="2" GridPane.rowIndex="1">
-                        <TextField fx:id="interest_field" />
+                        <TextField fx:id="interest_field" editable="false"/>
                         <Label minWidth="-Infinity" text="Interest" />
                     </VBox>
                     <VBox GridPane.rowIndex="2">
@@ -111,11 +111,11 @@
                         <Label minWidth="-Infinity" text="Faction" />
                     </VBox>
                     <VBox GridPane.columnIndex="1" GridPane.rowIndex="2">
-                        <TextField fx:id="race_field" />
+                        <TextField fx:id="race_field" editable="false"/>
                         <Label minWidth="-Infinity" text="Race" />
                     </VBox>
                     <VBox GridPane.columnIndex="2" GridPane.rowIndex="2">
-                        <TextField fx:id="cp_field" />
+                        <TextField fx:id="cp_field" editable="false"/>
                         <Label minWidth="-Infinity" text="CP" />
                     </VBox>
                     <VBox GridPane.rowIndex="3">

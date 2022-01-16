@@ -207,11 +207,6 @@
       },
       {
         "type": "SINGLE",
-        "option": "Fray or Melee",
-        "value": 20
-      },
-      {
-        "type": "SINGLE",
         "option": "Free Fall",
         "value": 40
       },
@@ -386,11 +381,6 @@
         "value": 40
       },
       {
-        "type": "SINGLE",
-        "option": "Athletics or Free Fall",
-        "value": 40
-      },
-      {
         "type": "MULTI",
         "prefix": "Hardware",
         "option": [
@@ -518,11 +508,6 @@
           "Guns",
           "Melee"
         ],
-        "value": 40
-      },
-      {
-        "type": "SINGLE",
-        "option": "Guns or Melee",
         "value": 40
       },
       {

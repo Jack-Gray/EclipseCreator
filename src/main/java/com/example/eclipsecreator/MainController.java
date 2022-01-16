@@ -1,9 +1,39 @@
 package com.example.eclipsecreator;
 
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.SimpleDoubleProperty;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.skin.TableHeaderRow;
+import javafx.scene.control.skin.TableViewSkinBase;
+import javafx.scene.layout.VBox;
+import javafx.scene.text.Text;
+import javafx.util.Callback;
+import org.apache.commons.lang3.StringUtils;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainController {
+    private final PackageDao packageDao = new PackageDao();
+    @FXML
+    private ScrollPane race_scroll;
+    @FXML
+    private ScrollPane background_scroll;
+    @FXML
+    private ScrollPane career_scroll;
+    @FXML
+    private ScrollPane interest_scroll;
+    @FXML
+    private ToggleGroup container_toggleGroup;
+    @FXML
+    private VBox ego_container;
+    @FXML
+    private VBox skill_container;
     @FXML
     private ToggleGroup race_toggleGroup;
     @FXML
@@ -13,121 +43,16 @@ public class MainController {
     @FXML
     private ToggleGroup interest_toggleGroup;
     @FXML
-    private RadioToggleButton anisaeva_button;
+    private Text race_desc;
     @FXML
-    private RadioToggleButton bilago_button;
+    private Text background_desc;
     @FXML
-    private RadioToggleButton callihara_button;
+    private Text career_desc;
     @FXML
-    private RadioToggleButton colonist_button;
-    @FXML
-    private RadioToggleButton kellek_button;
-    @FXML
-    private RadioToggleButton djek_button;
-    @FXML
-    private RadioToggleButton exith_button;
-    @FXML
-    private RadioToggleButton naora_button;
-    @FXML
-    private RadioToggleButton okex_button;
-    @FXML
-    private RadioToggleButton sekkess_button;
-    @FXML
-    private RadioToggleButton senn_button;
-    @FXML
-    private RadioToggleButton construct_button;
-    @FXML
-    private RadioToggleButton freelancer_button;
-    @FXML
-    private RadioToggleButton hyperelite_button;
-    @FXML
-    private RadioToggleButton indenture_button;
-    @FXML
-    private RadioToggleButton loner_button;
-    @FXML
-    private RadioToggleButton settler_button;
-    @FXML
-    private RadioToggleButton sheltered_button;
-    @FXML
-    private RadioToggleButton underclass_button;
-    @FXML
-    private RadioToggleButton freak_button;
-    @FXML
-    private RadioToggleButton psionicist_button;
-    @FXML
-    private RadioToggleButton academic_button;
-    @FXML
-    private RadioToggleButton covertOps_button;
-    @FXML
-    private RadioToggleButton enforcer_button;
-    @FXML
-    private RadioToggleButton explorer_button;
-    @FXML
-    private RadioToggleButton face_button;
-    @FXML
-    private RadioToggleButton genehacker_button;
-    @FXML
-    private RadioToggleButton hacker_button;
-    @FXML
-    private RadioToggleButton investigator_button;
-    @FXML
-    private RadioToggleButton medic_button;
-    @FXML
-    private RadioToggleButton mindhacker_button;
-    @FXML
-    private RadioToggleButton scavenger_button;
-    @FXML
-    private RadioToggleButton scientist_button;
-    @FXML
-    private RadioToggleButton soldier_button;
-    @FXML
-    private RadioToggleButton technologist_button;
-    @FXML
-    private RadioToggleButton artistIcon_button;
-    @FXML
-    private RadioToggleButton fighter_button;
-    @FXML
-    private RadioToggleButton firstAider_button;
-    @FXML
-    private RadioToggleButton forensics_button;
-    @FXML
-    private RadioToggleButton networker_button;
-    @FXML
-    private RadioToggleButton remoteOps_button;
-    @FXML
-    private RadioToggleButton student_button;
-    @FXML
-    private RadioToggleButton handler_button;
-    @FXML
-    private RadioToggleButton pantologist_button;
-    @FXML
-    private RadioToggleButton reprobate_button;
-    @FXML
-    private RadioToggleButton survivalist_button;
-    @FXML
-    private RadioToggleButton leader_button;
-    @FXML
-    private RadioToggleButton pilot_button;
-    @FXML
-    private RadioToggleButton slacker_button;
-    @FXML
-    private RadioToggleButton voyager_button;
-    @FXML
-    private RadioToggleButton psionics_button;
-    @FXML
-    private TextArea race_desc;
-    @FXML
-    private TextArea background_desc;
-    @FXML
-    private TextArea career_desc;
-    @FXML
-    private TextArea interest_desc;
-    @FXML
-    private TableView<Skill> background_table;
-    @FXML
-    private TableView<Skill> career_table;
-    @FXML
-    private TableView<Skill> interest_table;
+    private Text interest_desc;
+    public TableView<Skill> background_table;
+    public TableView<Skill> career_table;
+    public TableView<Skill> interest_table;
     @FXML
     private TextField name_field;
     @FXML
@@ -184,4 +109,104 @@ public class MainController {
     private TableView<Skill> activeSkills_table;
     @FXML
     private Label activeRemaining_label;
+
+    @FXML
+    protected void initialize(){
+
+        skill_container.setVisible(false);
+        skill_container.setManaged(false);
+        setInitialValues();
+
+        race_toggleGroup.selectedToggleProperty().addListener((observableValue, toggle, t1) -> {
+            RadioToggleButton radioToggleButton = (RadioToggleButton) race_toggleGroup.getSelectedToggle();
+            setTabData(radioToggleButton.getText().toLowerCase(), "race");
+        });
+
+        background_toggleGroup.selectedToggleProperty().addListener((observableValue, toggle, t1) -> {
+            RadioToggleButton radioToggleButton = (RadioToggleButton) background_toggleGroup.getSelectedToggle();
+            setTabData(radioToggleButton.getText().toLowerCase(), "background");
+        });
+
+        career_toggleGroup.selectedToggleProperty().addListener(((observableValue, toggle, t1) -> {
+            RadioToggleButton radioToggleButton = (RadioToggleButton) career_toggleGroup.getSelectedToggle();
+            setTabData(radioToggleButton.getText().toLowerCase(), "career");
+        }));
+
+        interest_toggleGroup.selectedToggleProperty().addListener(((observableValue, toggle, t1) -> {
+            RadioToggleButton radioToggleButton = (RadioToggleButton) interest_toggleGroup.getSelectedToggle();
+            setTabData(radioToggleButton.getText().toLowerCase(), "interest");
+        }));
+
+        container_toggleGroup.selectedToggleProperty().addListener((observableValue, toggle, t1) -> {
+            RadioToggleButton radioToggleButton = (RadioToggleButton) container_toggleGroup.getSelectedToggle();
+            if(radioToggleButton.getText().equals("Ego")){
+                skill_container.setVisible(false);
+                skill_container.setManaged(false);
+                ego_container.setVisible(true);
+                ego_container.setManaged(true);
+            } else {
+                ego_container.setVisible(false);
+                ego_container.setManaged(false);
+                skill_container.setVisible(true);
+                skill_container.setManaged(true);
+            }
+        });
+    }
+
+    private void setInitialValues(){
+        setTabData("anisaeva", "race");
+        setTabData("construct", "background");
+        setTabData("academic", "career");
+        setTabData("artist/icon", "interest");
+    }
+
+    private void setTabData(String name, String category){
+        OriginPackage originPackage;
+        if(category.equals("race")){
+            originPackage = packageDao.findRacePackage(name);
+        } else {
+            originPackage = packageDao.findSkillPackage(name, category);
+        }
+        switch (category) {
+            case "race" -> {
+                race_field.setText(StringUtils.capitalize(originPackage.getName()));
+                race_desc.setText(originPackage.getDescription());
+            }
+            case "background" -> {
+                background_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                background_desc.setText(originPackage.getDescription());
+                setTableData(background_table, ((SkillPackage) originPackage).getSkillList());
+            }
+            case "career" -> {
+                career_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                career_desc.setText(originPackage.getDescription());
+                setTableData(career_table, ((SkillPackage) originPackage).getSkillList());
+            }
+            case "interest" -> {
+                interest_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                interest_desc.setText(originPackage.getDescription());
+                setTableData(interest_table, ((SkillPackage) originPackage).getSkillList());
+            }
+        }
+    }
+
+    @SuppressWarnings("unchecked")
+    private void setTableData(TableView<Skill> tableView, ArrayList<Skill> skills){
+        tableView.getColumns().clear();
+        ObservableList<Skill> tableSkills = FXCollections.observableArrayList(skills);
+        tableView.setItems(tableSkills);
+        TableColumn<Skill, Map<String, Object>> option = new TableColumn<>("Skill");
+        TableColumn<Skill, Integer> value = new TableColumn<>("Value");
+        option.setCellValueFactory(skillListCellDataFeatures -> {
+            Skill skill = skillListCellDataFeatures.getValue();
+            Map<String, Object> objectMap = new HashMap<>();
+            objectMap.put("type", skill.getSkillType());
+            objectMap.put("prefix", skill.getPrefix());
+            objectMap.put("option", skill.getOption());
+            return new ReadOnlyObjectWrapper<>(objectMap);
+        });
+        value.setCellValueFactory(new PropertyValueFactory<>("value"));
+        option.setCellFactory(skillArrayListTableColumn -> new SkillCellFactory());
+        tableView.getColumns().addAll(option, value);
+    }
 }

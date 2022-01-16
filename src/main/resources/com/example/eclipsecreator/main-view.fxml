@@ -41,7 +41,6 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleGroup?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -50,17 +49,15 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.TilePane?>
 <?import javafx.scene.layout.VBox?>
-
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.TextFlow?>
 <?import com.example.eclipsecreator.RadioToggleButton?>
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="640.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.eclipsecreator.MainController">
     <padding>
         <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
     </padding>
-    <ScrollPane fitToWidth="true" VBox.vgrow="ALWAYS">
-        <VBox.margin>
-            <Insets />
-        </VBox.margin>
+    <ScrollPane fitToWidth="true" fitToHeight="true" VBox.vgrow="ALWAYS">
         <padding>
             <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
         </padding>
@@ -70,7 +67,7 @@
                 <ColumnConstraints minWidth="-Infinity" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints minHeight="-Infinity" vgrow="SOMETIMES" />
             </rowConstraints>
             <VBox>
                 <GridPane hgap="8.0" vgap="8.0">
@@ -142,8 +139,11 @@
                     <rowConstraints>
                         <RowConstraints vgrow="SOMETIMES" />
                     </rowConstraints>
-                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Ego" />
-                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Skills" GridPane.columnIndex="1" />
+                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Ego">
+                  <toggleGroup>
+                     <ToggleGroup fx:id="container_toggleGroup" />
+                  </toggleGroup></RadioToggleButton>
+                    <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Skills" toggleGroup="$container_toggleGroup" GridPane.columnIndex="1" />
                     <VBox.margin>
                         <Insets top="32.0" />
                     </VBox.margin>
@@ -152,11 +152,11 @@
                     <VBox.margin>
                         <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
                     </VBox.margin>
-                    <VBox minHeight="-Infinity" spacing="8.0">
+                    <VBox fx:id="ego_container" minHeight="-Infinity" spacing="8.0">
                         <VBox>
                             <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="APTITUDES" />
                             <VBox spacing="8.0">
-                                <TilePane alignment="CENTER" hgap="16.0" vgap="8.0">
+                                <TilePane prefColumns="2" alignment="CENTER" hgap="16.0" vgap="8.0">
                                     <VBox>
                                         <Spinner fx:id="cognition_spinner" maxWidth="1.7976931348623157E308" prefWidth="0.0" />
                                         <Label alignment="CENTER" maxWidth="1.7976931348623157E308" text="COGNITION" />
@@ -192,9 +192,9 @@
                             <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="MENTAL STATS" />
                             <GridPane hgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
                                 </columnConstraints>
                                 <rowConstraints>
                                     <RowConstraints vgrow="SOMETIMES" />
@@ -226,8 +226,8 @@
                             <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="DERIVED STATS" />
                             <GridPane hgap="8.0">
                                 <columnConstraints>
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
-                                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
+                                    <ColumnConstraints hgrow="SOMETIMES" />
                                 </columnConstraints>
                                 <rowConstraints>
                                     <RowConstraints vgrow="SOMETIMES" />
@@ -248,10 +248,10 @@
                             </GridPane>
                         </VBox>
                     </VBox>
-                    <VBox spacing="8.0">
+                    <VBox fx:id="skill_container" spacing="8.0">
                         <VBox>
                             <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="KNOW SKILLS" />
-                            <TableView fx:id="knowSkills_table">
+                            <TableView fx:id="knowSkills_table" prefHeight="0.0">
                                 <columns>
                                     <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
                                     <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
@@ -261,7 +261,7 @@
                         </VBox>
                         <VBox>
                             <Label alignment="CENTER_RIGHT" maxWidth="1.7976931348623157E308" text="ACTIVE SKILLS" />
-                            <TableView fx:id="activeSkills_table">
+                            <TableView fx:id="activeSkills_table" prefHeight="0.0">
                                 <columns>
                                     <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
                                     <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
@@ -272,7 +272,7 @@
                     </VBox>
                 </VBox>
             </VBox>
-            <TabPane maxWidth="-Infinity" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
+            <TabPane tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1">
                 <Tab text="Race">
                     <VBox spacing="16.0">
                         <padding>
@@ -293,27 +293,30 @@
                                 <RowConstraints vgrow="SOMETIMES" />
                                 <RowConstraints vgrow="SOMETIMES" />
                             </rowConstraints>
-                            <RadioToggleButton fx:id="anisaeva_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Anisaeva" GridPane.columnSpan="2">
-                        <toggleGroup>
-                           <ToggleGroup fx:id="race_toggleGroup" />
-                        </toggleGroup></RadioToggleButton>
-                            <RadioToggleButton fx:id="bilago_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Bilago" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                            <RadioToggleButton fx:id="callihara_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Callihara" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
-                            <RadioToggleButton fx:id="colonist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Colonist" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="kellek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kellek" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="djek_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Djek" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="exith_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Exith" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="naora_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Naora" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="okex_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Okex" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="sekkess_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sekkess" toggleGroup="$race_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                            <RadioToggleButton fx:id="senn_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Senn" toggleGroup="$race_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Anisaeva" GridPane.columnSpan="2">
+                                <toggleGroup>
+                                    <ToggleGroup fx:id="race_toggleGroup" />
+                                </toggleGroup>
+                            </RadioToggleButton>
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Bilago" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Callihara" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Colonist" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kellek" toggleGroup="$race_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Djek" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Exith" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Naora" toggleGroup="$race_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Okex" toggleGroup="$race_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sekkess" toggleGroup="$race_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Senn" toggleGroup="$race_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="3" />
                         </GridPane>
-                        <ScrollPane fitToWidth="true" prefWidth="0.0">
+                        <VBox>
                             <VBox.margin>
                                 <Insets top="8.0" />
                             </VBox.margin>
-                            <TextArea fx:id="race_desc" wrapText="true" />
-                        </ScrollPane>
+                            <TextFlow prefWidth="${race_desc.parent.parent.scaleX}" textAlignment="CENTER">
+                                <Text fx:id="race_desc" />
+                            </TextFlow>
+                        </VBox>
                     </VBox>
                 </Tab>
                 <Tab text="Background">
@@ -336,17 +339,18 @@
                                     <RowConstraints vgrow="SOMETIMES" />
                                     <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <RadioToggleButton fx:id="construct_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Construct" GridPane.columnSpan="2">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="background_toggleGroup" />
-                           </toggleGroup></RadioToggleButton>
-                                <RadioToggleButton fx:id="freelancer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freelancer" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                                <RadioToggleButton fx:id="hyperelite_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hyperelite" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
-                                <RadioToggleButton fx:id="indenture_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Indenture" toggleGroup="$background_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="loner_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Loner" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="settler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Settler" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="sheltered_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sheltered" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                                <RadioToggleButton fx:id="underclass_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Underclass" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Construct" GridPane.columnSpan="2">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="background_toggleGroup" />
+                                    </toggleGroup>
+                                </RadioToggleButton>
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freelancer" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hyperelite" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Indenture" toggleGroup="$background_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Loner" toggleGroup="$background_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Settler" toggleGroup="$background_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Sheltered" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Underclass" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="2" />
                             </GridPane>
                             <HBox spacing="8.0">
                                 <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
@@ -365,24 +369,19 @@
                                 <rowConstraints>
                                     <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <RadioToggleButton fx:id="freak_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freak" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" />
-                                <RadioToggleButton fx:id="psionicist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionicist" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Freak" toggleGroup="$background_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionicist" toggleGroup="$background_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" />
                             </GridPane>
                         </VBox>
-                        <ScrollPane fitToWidth="true" prefWidth="0.0">
+                        <VBox spacing="8.0">
                             <VBox.margin>
                                 <Insets top="8.0" />
                             </VBox.margin>
-                            <VBox spacing="8.0">
-                                <TextArea fx:id="background_desc" wrapText="true" />
-                                <TableView fx:id="background_table">
-                                    <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
-                                    </columns>
-                                </TableView>
-                            </VBox>
-                        </ScrollPane>
+                            <TextFlow prefWidth="${background_desc.parent.parent.scaleX}" textAlignment="CENTER">
+                                <Text fx:id="background_desc" />
+                            </TextFlow>
+                            <TableView fx:id="background_table" />
+                        </VBox>
                     </VBox>
                 </Tab>
                 <Tab text="Career">
@@ -406,38 +405,34 @@
                                 <RowConstraints vgrow="SOMETIMES" />
                                 <RowConstraints vgrow="SOMETIMES" />
                             </rowConstraints>
-                            <RadioToggleButton fx:id="academic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Academic" textOverrun="CLIP" GridPane.columnSpan="2">
-                        <toggleGroup>
-                           <ToggleGroup fx:id="career_toggleGroup" />
-                        </toggleGroup></RadioToggleButton>
-                            <RadioToggleButton fx:id="covertOps_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Covert Ops" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
-                            <RadioToggleButton fx:id="enforcer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enforcer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
-                            <RadioToggleButton fx:id="explorer_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Explorer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="face_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Face" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="genehacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Genehacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
-                            <RadioToggleButton fx:id="hacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="investigator_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Investigator" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="medic_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Medic" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-                            <RadioToggleButton fx:id="mindhacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Mindhacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                            <RadioToggleButton fx:id="scavenger_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scavenger" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                            <RadioToggleButton fx:id="scientist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scientist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
-                            <RadioToggleButton fx:id="soldier_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Soldier" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
-                            <RadioToggleButton fx:id="technologist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Technologist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Academic" textOverrun="CLIP" GridPane.columnSpan="2">
+                                <toggleGroup>
+                                    <ToggleGroup fx:id="career_toggleGroup" />
+                                </toggleGroup>
+                            </RadioToggleButton>
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Covert Ops" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Enforcer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Explorer" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Face" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Genehacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="1" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Hacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Investigator" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Medic" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Mindhacker" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scavenger" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="2" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Scientist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="4" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Soldier" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                            <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Technologist" textOverrun="CLIP" toggleGroup="$career_toggleGroup" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.rowIndex="4" />
                         </GridPane>
-                        <ScrollPane fitToWidth="true" prefWidth="0.0">
+                        <VBox spacing="8.0">
                             <VBox.margin>
                                 <Insets top="8.0" />
                             </VBox.margin>
-                            <VBox spacing="8.0">
-                                <TextArea fx:id="career_desc" wrapText="true" />
-                                <TableView fx:id="career_table">
-                                    <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
-                                    </columns>
-                                </TableView>
-                            </VBox>
-                        </ScrollPane>
+                            <TextFlow prefWidth="${career_desc.parent.parent.scaleX}" textAlignment="CENTER">
+                                <Text fx:id="career_desc" />
+                            </TextFlow>
+                            <TableView fx:id="career_table" />
+                        </VBox>
                     </VBox>
                 </Tab>
                 <Tab text="Interest">
@@ -459,24 +454,25 @@
                                     <RowConstraints vgrow="SOMETIMES" />
                                     <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <RadioToggleButton fx:id="artistIcon_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Artist/Icon" textOverrun="CLIP">
-                           <toggleGroup>
-                              <ToggleGroup fx:id="interest_toggleGroup" />
-                           </toggleGroup></RadioToggleButton>
-                                <RadioToggleButton fx:id="fighter_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Fighter" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
-                                <RadioToggleButton fx:id="firstAider_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="First Aider" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" />
-                                <RadioToggleButton fx:id="forensics_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Forensics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="networker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Networker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="2" />
-                                <RadioToggleButton fx:id="remoteOps_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Remote Ops" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="3" />
-                                <RadioToggleButton fx:id="student_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Student" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="4" />
-                                <RadioToggleButton fx:id="handler_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Handler" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="pantologist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pantologist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <RadioToggleButton fx:id="reprobate_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Reprobate" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                <RadioToggleButton fx:id="survivalist_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Survivalist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                <RadioToggleButton fx:id="leader_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Leader" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                <RadioToggleButton fx:id="pilot_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pilot" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                <RadioToggleButton fx:id="slacker_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Slacker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                <RadioToggleButton fx:id="voyager_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Voyager" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" selected="true" text="Artist/Icon" textOverrun="CLIP">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="interest_toggleGroup" />
+                                    </toggleGroup>
+                                </RadioToggleButton>
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Fighter" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="First Aider" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Forensics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Networker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Remote Ops" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="3" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Student" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.rowIndex="4" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Handler" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pantologist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Reprobate" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Survivalist" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Leader" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Pilot" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Slacker" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Voyager" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="2" GridPane.rowIndex="4" />
                             </GridPane>
                             <HBox spacing="8.0">
                                 <Separator maxHeight="1.7976931348623157E308" HBox.hgrow="ALWAYS" />
@@ -492,23 +488,18 @@
                                 <rowConstraints>
                                     <RowConstraints vgrow="SOMETIMES" />
                                 </rowConstraints>
-                                <RadioToggleButton fx:id="psionics_button" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
+                                <RadioToggleButton maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Psionics" textOverrun="CLIP" toggleGroup="$interest_toggleGroup" GridPane.columnIndex="1" />
                             </GridPane>
                         </VBox>
-                        <ScrollPane fitToWidth="true" prefWidth="0.0">
+                        <VBox spacing="8.0">
                             <VBox.margin>
                                 <Insets top="8.0" />
                             </VBox.margin>
-                            <VBox spacing="8.0">
-                                <TextArea fx:id="interest_desc" wrapText="true" />
-                                <TableView fx:id="interest_table">
-                                    <columns>
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C1" />
-                                        <TableColumn maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="C2" />
-                                    </columns>
-                                </TableView>
-                            </VBox>
-                        </ScrollPane>
+                            <TextFlow prefWidth="${interest_desc.parent.parent.scaleX}" textAlignment="CENTER">
+                                <Text fx:id="interest_desc" />
+                            </TextFlow>
+                            <TableView fx:id="interest_table" />
+                        </VBox>
                     </VBox>
                 </Tab>
             </TabPane>

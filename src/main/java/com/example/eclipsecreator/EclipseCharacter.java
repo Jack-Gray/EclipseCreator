@@ -1,12 +1,12 @@
 package com.example.eclipsecreator;
 
-public class Character {
+public class EclipseCharacter {
     OriginPackage race;
     SkillPackage background;
     SkillPackage career;
     SkillPackage interest;
 
-    public Character(OriginPackage race, SkillPackage background, SkillPackage career, SkillPackage interest) {
+    public EclipseCharacter(OriginPackage race, SkillPackage background, SkillPackage career, SkillPackage interest) {
         this.race = race;
         this.background = background;
         this.career = career;

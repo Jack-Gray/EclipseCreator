@@ -1,33 +1,29 @@
 package com.example.eclipsecreator;
 
+import javafx.beans.binding.Bindings;
+import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.property.SimpleIntegerProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
+import javafx.scene.control.SpinnerValueFactory.IntegerSpinnerValueFactory;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.skin.TableHeaderRow;
-import javafx.scene.control.skin.TableViewSkinBase;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
-import javafx.util.Callback;
 import org.apache.commons.lang3.StringUtils;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+
+import static java.lang.Math.min;
 
 public class MainController {
     private final PackageDao packageDao = new PackageDao();
-    @FXML
-    private ScrollPane race_scroll;
-    @FXML
-    private ScrollPane background_scroll;
-    @FXML
-    private ScrollPane career_scroll;
-    @FXML
-    private ScrollPane interest_scroll;
+    private final EclipseCharacter eclipseCharacter = new EclipseCharacter();
+    private final Integer aptitudePointsMax = 60;
+    private final IntegerProperty aptitudePointsRemaining = new SimpleIntegerProperty(aptitudePointsMax);
+
     @FXML
     private ToggleGroup container_toggleGroup;
     @FXML
@@ -158,6 +154,7 @@ public class MainController {
         setTabData("construct", "background");
         setTabData("academic", "career");
         setTabData("artist/icon", "interest");
+        setSpinnerValueFactories();
     }
 
     private void setTabData(String name, String category){
@@ -171,26 +168,31 @@ public class MainController {
             case "race" -> {
                 race_field.setText(StringUtils.capitalize(originPackage.getName()));
                 race_desc.setText(originPackage.getDescription());
+                eclipseCharacter.setRace(originPackage);
             }
             case "background" -> {
-                background_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                background_field.setText(StringUtils.capitalize(originPackage.getName()));
                 background_desc.setText(originPackage.getDescription());
                 setTableData(background_table, ((SkillPackage) originPackage).getSkillList());
+                eclipseCharacter.setBackground((SkillPackage) originPackage);
             }
             case "career" -> {
-                career_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                career_field.setText(StringUtils.capitalize(originPackage.getName()));
                 career_desc.setText(originPackage.getDescription());
                 setTableData(career_table, ((SkillPackage) originPackage).getSkillList());
+                eclipseCharacter.setCareer((SkillPackage) originPackage);
             }
             case "interest" -> {
-                interest_desc.setText(StringUtils.capitalize(originPackage.getName()));
+                interest_field.setText(StringUtils.capitalize(originPackage.getName()));
                 interest_desc.setText(originPackage.getDescription());
                 setTableData(interest_table, ((SkillPackage) originPackage).getSkillList());
+                eclipseCharacter.setInterest((SkillPackage) originPackage);
             }
         }
     }
 
     @SuppressWarnings("unchecked")
+    //TODO: possibly convert tables to listviews with custom cells to avoid headers?
     private void setTableData(TableView<Skill> tableView, ArrayList<Skill> skills){
         tableView.getColumns().clear();
         ObservableList<Skill> tableSkills = FXCollections.observableArrayList(skills);
@@ -208,5 +210,20 @@ public class MainController {
         value.setCellValueFactory(new PropertyValueFactory<>("value"));
         option.setCellFactory(skillArrayListTableColumn -> new SkillCellFactory());
         tableView.getColumns().addAll(option, value);
+    }
+
+    private void setSpinnerValueFactories(){
+        for(var spinner : Arrays.asList(cognition_spinner, intuition_spinner, reflexes_spinner, savvy_spinner, somatics_spinner, willpower_spinner)) {
+            IntegerSpinnerValueFactory factory = new IntegerSpinnerValueFactory(5, aptitudePointsMax, 5);
+            factory.maxProperty().bind(Bindings.createIntegerBinding(() -> min(aptitudePointsRemaining.get() + factory.getValue(), 30), aptitudePointsRemaining, factory.valueProperty()));
+
+            factory.valueProperty().addListener((observable, oldValue, newValue) -> {
+                aptitudePointsRemaining.set(aptitudePointsRemaining.get() + oldValue - newValue);
+                aptitudeRemaining_label.setText("Points remaining: " + aptitudePointsRemaining.getValue().toString());
+            });
+
+            spinner.setValueFactory(factory);
+            aptitudeRemaining_label.setText("Points remaining: " + aptitudePointsRemaining.getValue().toString());
+        }
     }
 }
